@@ -1,0 +1,500 @@
+/*Website Styles*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #072323; /* Blue */
+  --secondary-color: #9a664f; /* Green */
+  --tertiary-color: #ddc29a; /* Red */
+  --quaternary-color: #fff2de; /* Yellow */
+  --accent-color: #8fa989; /* Purple */
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("./fonts/PPNeueMontreal-Bold.otf") format("opentype"); /* Adjust the path if necessary */
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("./fonts/PPNeueMontreal-Book.otf") format("opentype"); /* Adjust the path if necessary */
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("./fonts/PPNeueMontreal-Italic.otf") format("opentype"); /* Adjust the path if necessary */
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("./fonts/PPNeueMontreal-Medium.otf") format("opentype"); /* Adjust the path if necessary */
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("./fonts/PPNeueMontreal-SemiBolditalic.otf") format("opentype"); /* Adjust the path if necessary */
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("./fonts/PPNeueMontreal-Thin.otf") format("opentype"); /* Adjust the path if necessary */
+  font-weight: 100;
+  font-style: normal;
+}
+
+/*Website styles*/
+
+/*--------NAVBAR STYLES--------*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  padding: 0 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 60px 220px;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.navbar-menu .menu-item {
+  letter-spacing: 5px;
+  color: var(--quaternary-color);
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.menu-item.active {
+  background-color: var(--quaternary-color);
+  color: var(--primary-color);
+  font-weight: 500;
+  padding: 5px 25px;
+  border-radius: 50px;
+}
+
+.language-toggle {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.separator {
+  background-color: var(--quaternary-color);
+  height: 5px;
+  width: 5px;
+  border-radius: 100%;
+}
+
+.language-toggle button {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.language-toggle button span {
+  line-height: 20px;
+}
+
+.language-toggle .active-language {
+  padding: 5px 15px;
+
+  background-color: var(--quaternary-color);
+  color: var(--primary-color);
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+.off {
+  padding: 5px 5px;
+  background-color: transparent;
+  color: var(--quaternary-color);
+  border-radius: 50px;
+  font-weight: bold;
+
+  border: none;
+}
+
+/*--------HOME PAGE STYLES----------*/
+
+.home-page {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("chef-fotos/3.jpg"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Makes the background fixed during scrolling */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--quaternary-color);
+  padding: 0 16vw;
+}
+
+.home-page h1 {
+  font-weight: 500;
+  letter-spacing: 35px;
+  font-size: 40px;
+}
+
+/*------------CONTACT PAGE STYLES-----------*/
+
+.contact-page {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("chef-fotos/10.jpg"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Makes the background fixed during scrolling */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--quaternary-color);
+  padding: 0 16vw;
+}
+
+.contact-box-1,
+.contact-box-2 {
+  border: 1px solid var(--quaternary-color);
+  padding: 25px;
+  width: 300px;
+  margin-left: 40vw;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  background-color: rgba(0, 0, 0, 0.364);
+}
+
+.contact-box-1 h1 {
+  font-weight: 500;
+  letter-spacing: 20px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-box-1 p:first-of-type {
+  margin-top: 60px;
+}
+
+.contact-box-2 {
+  text-align: end;
+  padding: 10px 25px !important;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/ /* Makes the background fixed during scrolling */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.ig-icon {
+  background-image: url("icons/instagram.png"); /* Replace with your image path */
+}
+
+.email-icon {
+  background-image: url("icons/mail.png"); /* Replace with your image path */
+}
+
+.tel-icon {
+  background-image: url("icons/call.png"); /* Replace with your image path */
+}
+
+/*------------ABOUT PAGE STYLES-------------*/
+
+.about-page {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.about-page .section-1 {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("chef-fotos/5.jpg"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/ /* Makes the background fixed during scrolling */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  color: var(--quaternary-color);
+  padding: 0 16vw;
+}
+
+.text-display-about {
+  display: block;
+  width: 400px;
+  font-size: 18px;
+  letter-spacing: 0.7px;
+  grid-column: 2;
+  grid-row: 2;
+  margin-left: 30%;
+  align-content: center;
+  margin-top: -10px;
+  line-height: 24px;
+}
+
+.text-display {
+  display: block;
+}
+
+.text-hide {
+  display: none;
+}
+
+.section-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  font-weight: 500;
+}
+
+.plate-1 {
+  height: 100vh;
+  width: 100%;
+  background-image: url("plates/plate-1.jpg"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/ /* Makes the background fixed during scrolling */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+.sub-section-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 35px;
+}
+
+.chef-image-about {
+  height: 55vh;
+  width: 30vw;
+  background-image: url("chef-fotos/6.jpg"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/ /* Makes the background fixed during scrolling */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  margin-left: auto;
+}
+
+.text-display-section-2 {
+  width: 350px;
+  font-size: 20px;
+  letter-spacing: 0.7px;
+  color: var(--secondary-color);
+  line-height: 28px;
+  margin-left: auto;
+  text-align: end;
+}
+
+.section-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  font-weight: 500;
+}
+
+.plate-2-container {
+  padding-right: 35px;
+}
+
+.plate-2 {
+  height: 55vh;
+  width: 100%;
+  background-image: url("plates/plate-2.jpg"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/ /* Makes the background fixed during scrolling */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+.text-display-section-3 {
+  width: 400px;
+  font-size: 20px;
+  letter-spacing: 0.7px;
+  color: var(--secondary-color);
+  line-height: 26px;
+  margin-right: auto;
+  text-align: start;
+}
+
+.sub-section-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+/*--------------CAREER PAGE STYLES-----------------*/
+
+.restaurant {
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Makes the background fixed during scrolling */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  display: none;
+}
+
+.restaurant-show {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.el-celler {
+  background-image: url("restaurants/ElCeller.jpg");
+}
+
+.juana-la-loca {
+  background-image: url("restaurants/JuanaLaLoca.jpg");
+}
+
+.luxury {
+  background-image: url("restaurants/Luxury.jpg");
+}
+
+.monasterio {
+  background-image: url("restaurants/MonasterioDelViento.jpg");
+}
+
+.moo {
+  background-image: url("restaurants/MooRestaurante.jpg");
+}
+
+.primario {
+  background-image: url("restaurants/Primario.jpg");
+}
+
+.filter-container {
+  background-color: hsla(182, 67%, 8%, 0.6);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--quaternary-color);
+  gap: 10px;
+}
+
+.filter-container h2 {
+  font-size: 25px;
+  font-weight: 300;
+  letter-spacing: 10px;
+  margin-bottom: 60px;
+}
+
+.career-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70vw;
+  padding: 0 40px;
+  position: absolute;
+  bottom: 100px;
+  padding: 60px 20px;
+}
+
+.restaurant-description {
+  display: flex;
+  gap: 80px;
+  margin-bottom: 100px;
+}
+
+.restaurant-description p {
+  width: 350px;
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 22px;
+}
+
+.restaurant-description p:first-child {
+  font-weight: 500;
+}
+
+.celler-logo {
+  width: 800px;
+  height: fit-content;
+}
+
+.restaurant-location {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 300;
+  align-items: center;
+  justify-content: center;
+}
+
+.divider {
+  background-color: var(--quaternary-color);
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+}
+
+.restaurant-hide {
+  display: none;
+}
