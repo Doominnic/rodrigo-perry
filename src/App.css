@@ -65,11 +65,11 @@
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  padding: 0 40px;
+
   position: absolute;
   top: 0;
   left: 0;
-  padding: 60px 220px;
+  padding: 40px 220px;
   z-index: 500;
 }
 
@@ -82,7 +82,7 @@
 .navbar-menu .menu-item {
   letter-spacing: 5px;
   color: var(--quaternary-color);
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 100;
 }
 
@@ -118,12 +118,13 @@
 }
 
 .language-toggle button span {
-  line-height: 20px;
+  line-height: 10px;
+  font-size: 10px;
 }
 
 .language-toggle .active-language {
   padding: 5px 15px;
-
+  padding-top: 6px;
   background-color: var(--quaternary-color);
   color: var(--primary-color);
   border-radius: 50px;
@@ -171,7 +172,7 @@
 .contact-page {
   height: 100vh;
   width: 100vw;
-  background-image: url("chef-fotos/10.jpg"); /* Replace with your image path */
+  background-image: url("/public/chef-fotos/10.jpg"); /* Replace with your image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -234,15 +235,15 @@
 }
 
 .ig-icon {
-  background-image: url("icons/instagram.png"); /* Replace with your image path */
+  background-image: url("/public/icons/instagram.png"); /* Replace with your image path */
 }
 
 .email-icon {
-  background-image: url("icons/mail.png"); /* Replace with your image path */
+  background-image: url("/public/icons/mail.png"); /* Replace with your image path */
 }
 
 .tel-icon {
-  background-image: url("icons/call.png"); /* Replace with your image path */
+  background-image: url("/public/icons/call.png"); /* Replace with your image path */
 }
 
 /*------------ABOUT PAGE STYLES-------------*/
@@ -256,7 +257,7 @@
 .about-page .section-1 {
   height: 100vh;
   width: 100vw;
-  background-image: url("chef-fotos/5.jpg"); /* Replace with your image path */
+  background-image: url("/public/chef-fotos/5.jpg"); /* Replace with your image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -275,13 +276,13 @@
   display: block;
   width: 400px;
   font-size: 18px;
-  letter-spacing: 0.7px;
+  letter-spacing: 0.6px;
   grid-column: 2;
   grid-row: 2;
   margin-left: 30%;
   align-content: center;
   margin-top: -10px;
-  line-height: 24px;
+  line-height: 22px;
 }
 
 .text-display {
@@ -302,7 +303,7 @@
 .plate-1 {
   height: 100vh;
   width: 100%;
-  background-image: url("plates/plate-1.jpg"); /* Replace with your image path */
+  background-image: url("/public/plates/plate-1.jpg"); /* Replace with your image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -322,7 +323,7 @@
 .chef-image-about {
   height: 55vh;
   width: 30vw;
-  background-image: url("chef-fotos/6.jpg"); /* Replace with your image path */
+  background-image: url("/public/chef-fotos/6.jpg"); /* Replace with your image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -335,10 +336,10 @@
 
 .text-display-section-2 {
   width: 350px;
-  font-size: 20px;
-  letter-spacing: 0.7px;
+  font-size: 18px;
+  letter-spacing: 0.2px;
   color: var(--secondary-color);
-  line-height: 28px;
+  line-height: 22px;
   margin-left: auto;
   text-align: end;
 }
@@ -357,7 +358,7 @@
 .plate-2 {
   height: 55vh;
   width: 100%;
-  background-image: url("plates/plate-2.jpg"); /* Replace with your image path */
+  background-image: url("/public/plates/plate-2.jpg"); /* Replace with your image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -369,10 +370,10 @@
 
 .text-display-section-3 {
   width: 400px;
-  font-size: 20px;
-  letter-spacing: 0.7px;
+  font-size: 18px;
+  letter-spacing: 0.2px;
   color: var(--secondary-color);
-  line-height: 26px;
+  line-height: 22px;
   margin-right: auto;
   text-align: start;
 }
@@ -449,14 +450,14 @@
 }
 
 .filter-container h1 {
-  font-size: 54px;
+  font-size: 46px;
   font-weight: 500;
   letter-spacing: 10px;
   margin-bottom: -10px;
 }
 
 .filter-container h2 {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 300;
   letter-spacing: 10px;
   margin-bottom: 70px;
@@ -468,7 +469,7 @@
   align-items: center;
 
   grid-template-columns: repeat(6, 180px);
-  grid-template-rows: 70px;
+  grid-template-rows: 60px;
   bottom: 50px;
   position: fixed; /* Fix the navbar position relative to the viewport */
   /* 100px above the bottom of the screen */
@@ -487,7 +488,7 @@
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 22px 20px;
+  padding: 18px 20px;
   justify-content: center;
 }
 
@@ -516,9 +517,9 @@
 .restaurant-description p {
   width: 350px;
   font-weight: 300;
-  font-size: 18px;
-  letter-spacing: 1px;
-  line-height: 22px;
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  line-height: 18px;
 }
 
 .restaurant-description p:first-child {
@@ -537,7 +538,7 @@
 }
 
 .monasterio-logo {
-  width: 200px;
+  width: 150px;
   height: fit-content;
 }
 
@@ -553,7 +554,7 @@
 .restaurant-location {
   display: flex;
   gap: 10px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 300;
   align-items: center;
   justify-content: center;
