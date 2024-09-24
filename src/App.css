@@ -119,12 +119,12 @@
 
 .language-toggle button span {
   line-height: 10px;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .language-toggle .active-language {
   padding: 5px 15px;
-  padding-top: 6px;
+
   background-color: var(--quaternary-color);
   color: var(--primary-color);
   border-radius: 50px;
