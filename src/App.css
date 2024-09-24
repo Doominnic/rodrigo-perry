@@ -114,6 +114,7 @@
   align-items: center;
   justify-content: center;
   border: none;
+  cursor: pointer;
 }
 
 .language-toggle button span {
@@ -144,7 +145,7 @@
 .home-page {
   height: 100vh;
   width: 100vw;
-  background-image: url("chef-fotos/3.jpg"); /* Replace with your image path */
+  background-image: url("/public/chef-fotos/3.jpg"); /* Replace with your image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -412,27 +413,27 @@
 }
 
 .el-celler {
-  background-image: url("restaurants/ElCeller.jpg");
+  background-image: url("/public/restaurants/ElCeller.jpg");
 }
 
 .juana-la-loca {
-  background-image: url("restaurants/JuanaLaLoca.jpg");
+  background-image: url("/public/restaurants/JuanaLaLoca.jpg");
 }
 
 .luxury {
-  background-image: url("restaurants/Luxury.jpg");
+  background-image: url("/public/restaurants/Luxury.jpg");
 }
 
 .monasterio {
-  background-image: url("restaurants/MonasterioDelViento.jpg");
+  background-image: url("/public/restaurants/MonasterioDelViento.jpg");
 }
 
 .moo {
-  background-image: url("restaurants/MooRestaurant.jpg");
+  background-image: url("/public/restaurants/MooRestaurant.jpg");
 }
 
 .primario {
-  background-image: url("restaurants/Primario.jpg");
+  background-image: url("/public/restaurants/Primario.jpg");
 }
 
 .filter-container {
