@@ -3,7 +3,7 @@ import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./componentes/navbar";
 import Services from "./pages/services";
-import Career from "./pages/Career";
+import Career from "./pages/career";
 import About from "./pages/about";
 import Gallery from "./pages/gallery";
 import Contact from "./pages/contact";
