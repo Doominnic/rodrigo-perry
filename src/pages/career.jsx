@@ -18,7 +18,12 @@ const Career = ({ language }) => {
         >
           <div className="filter-container">
             <img className="celler-logo" src="logos/logo1.png" />
-            <h2>RESTAURANT</h2>
+            <h2 className={language === "EN" ? "text-display" : "text-hide"}>
+              RESTAURANT
+            </h2>
+            <h2 className={language === "ES" ? "text-display" : "text-hide"}>
+              RESTAURANTE
+            </h2>
             <div className="restaurant-description">
               <p className={language === "EN" ? "text-display" : "text-hide"}>
                 Founded in 1986, this prestigious three Michelin Star restaurant
@@ -34,11 +39,35 @@ const Career = ({ language }) => {
                 preparation, mise en place, organization of supplies, and
                 maintaining cleanliness in the areas and all the equipment.
               </p>
+              <p className={language === "ES" ? "text-display" : "text-hide"}>
+                Fundado en 1986, este prestigioso restaurante con tres estrellas
+                Michelin está dirigido por los renombrados hermanos Roca: Joan,
+                el chef principal; Josep, el sommelier; y Jordi, el chef de
+                repostería.
+              </p>
+              <p className={language === "ES" ? "text-display" : "text-hide"}>
+                Especializado en la cocina tradicional catalana, el restaurante
+                alcanzó fama mundial al ser nombrado el mejor del mundo en la
+                lista de “Los 50 Mejores Restaurantes del Mundo” de la revista
+                Restaurant en 2013 y 2015. Responsable del servicio y
+                preparación del menú, mise en place, organización de suministros
+                y mantenimiento de la limpieza en las áreas y todo el equipo.
+              </p>
             </div>
             <div className="restaurant-location">
-              <p>Cook</p>
+              <p className={language === "EN" ? "text-display" : "text-hide"}>
+                Cook
+              </p>
+              <p className={language === "ES" ? "text-display" : "text-hide"}>
+                Cocinero
+              </p>
               <div className="divider"></div>
-              <p>Girona, Spain</p>
+              <p className={language === "EN" ? "text-display" : "text-hide"}>
+                Girona, Spain
+              </p>
+              <p className={language === "ES" ? "text-display" : "text-hide"}>
+                Girona, España
+              </p>
             </div>
           </div>
         </div>
@@ -49,7 +78,12 @@ const Career = ({ language }) => {
         >
           <div className="filter-container">
             <img className="juana-logo" src="logos/logo4.png" />
-            <h2>RESTAURANT</h2>
+            <h2 className={language === "EN" ? "text-display" : "text-hide"}>
+              RESTAURANT
+            </h2>
+            <h2 className={language === "ES" ? "text-display" : "text-hide"}>
+              RESTAURANTE
+            </h2>
             <div className="restaurant-description">
               <p className={language === "EN" ? "text-display" : "text-hide"}>
                 The inaugural project of the renowned Spanish group Tragaluz in
@@ -68,9 +102,31 @@ const Career = ({ language }) => {
                 creation, mise en place preparation, service, and company
                 catering.
               </p>
+              <p className={language === "ES" ? "text-display" : "text-hide"}>
+                El proyecto inaugural del renombrado grupo español Tragaluz en
+                Colombia, Juana la Loca, ofrece una cocina mediterránea con
+                especialidades como paella, cochinillo, pescados y ensaladas
+                frescas.
+              </p>
+              <p className={language === "ES" ? "text-display" : "text-hide"}>
+                La distintiva decoración, diseño y arquitectura del restaurante
+                fueron creados por el aclamado diseñador y arquitecto Isay
+                Weinfeld, lo que le valió a Juana la Loca el premio Wallpaper
+                Design Award al Mejor Restaurante en 2016.
+                <br /> <br />
+                Participante activo en la apertura del restaurante y Chef
+                responsable de la gestión de la cocina, relaciones con
+                proveedores, creación de menús, preparación de mise en place,
+                servicio y catering de la empresa.
+              </p>
             </div>
             <div className="restaurant-location">
-              <p>Executive Chef</p>
+              <p className={language === "EN" ? "text-display" : "text-hide"}>
+                Executive Chef
+              </p>
+              <p className={language === "ES" ? "text-display" : "text-hide"}>
+                Chef Ejecutivo
+              </p>
               <div className="divider"></div>
               <p>Bogotá, Colombia</p>
             </div>
@@ -83,7 +139,12 @@ const Career = ({ language }) => {
         >
           <div className="filter-container">
             <h1>LUXURY YACHTS</h1>
-            <h2>RESTAURANT</h2>
+            <h2 className={language === "EN" ? "text-display" : "text-hide"}>
+              RESTAURANT
+            </h2>
+            <h2 className={language === "ES" ? "text-display" : "text-hide"}>
+              RESTAURANTE
+            </h2>
             <div className="restaurant-description">
               <p className={language === "EN" ? "text-display" : "text-hide"}>
                 As a private chef on luxury yachts, bespoke dining experiences
@@ -99,11 +160,37 @@ const Career = ({ language }) => {
                 turning each meal into a memorable highlight of the voyage with
                 a focus on both impeccable presentation and exceptional taste.
               </p>
+              <p className={language === "ES" ? "text-display" : "text-hide"}>
+                Como chef privado en yates de lujo, se crean experiencias
+                gastronómicas personalizadas para una clientela exclusiva. Se
+                diseñan menús exquisitos y personalizados, que reflejan los más
+                altos estándares de arte culinario, utilizando solo los mejores
+                ingredientes.
+              </p>
+              <p className={language === "ES" ? "text-display" : "text-hide"}>
+                Las comidas gourmet se preparan con meticulosa atención a las
+                preferencias de los invitados, garantizando un servicio
+                excepcional en el entorno elegante e íntimo del yate. Esta
+                experiencia ha sido demostrada en diversas regiones de Europa y
+                el Caribe, convirtiendo cada comida en un momento memorable del
+                viaje, con un enfoque en una presentación impecable y un sabor
+                excepcional.
+              </p>
             </div>
             <div className="restaurant-location">
-              <p>Private Chef</p>
+              <p className={language === "EN" ? "text-display" : "text-hide"}>
+                Private Chef
+              </p>
+              <p className={language === "ES" ? "text-display" : "text-hide"}>
+                Chef Privado
+              </p>
               <div className="divider"></div>
-              <p>Europe - Caribbean</p>
+              <p className={language === "EN" ? "text-display" : "text-hide"}>
+                Europe - Caribbean
+              </p>
+              <p className={language === "ES" ? "text-display" : "text-hide"}>
+                Europa - Caribe
+              </p>
             </div>
           </div>
         </div>
@@ -137,11 +224,43 @@ const Career = ({ language }) => {
                 supplier relationships, administrative tasks, employees training
                 and team recruitment for the hotel.
               </p>
+              <p className={language === "ES" ? "text-display" : "text-hide"}>
+                Hotel boutique ubicado en una isla remota del océano Caribe,
+                destacado por ofrecer una experiencia de lujo mezclada con la
+                cultura local de la isla. El proyecto atrajo a turistas de alto
+                perfil de todo el mundo, interesados en una experiencia
+                auténtica, pero consciente y lujosa.
+                <br /> <br />
+                El hotel fue elogiado en destacadas publicaciones
+                internacionales como Condé Nast, Financial Times: How to Spend,
+                Vogue y GQ, entre otras.
+              </p>
+              <p className={language === "ES" ? "text-display" : "text-hide"}>
+                Encargado de la creación de experiencias gastronómicas y del
+                desarrollo del menú basado en calendarios estacionales y vedas
+                de pesca, trabajando directamente con pescadores y agricultores
+                artesanales de la isla. Responsable de la planificación,
+                capacitación y gestión de los empleados del hotel.
+                <br /> <br /> También responsable del desarrollo de menús,
+                servicio de restaurante, relaciones con proveedores, tareas
+                administrativas, capacitación de empleados y reclutamiento de
+                equipo para el hotel.
+              </p>
             </div>
             <div className="restaurant-location">
-              <p>Co-Creator and Executive Chef</p>
+              <p className={language === "EN" ? "text-display" : "text-hide"}>
+                Co-Creator and Executive Chef
+              </p>
+              <p className={language === "ES" ? "text-display" : "text-hide"}>
+                Co-Creador y Chef Ejecutivo
+              </p>
               <div className="divider"></div>
-              <p>Old Providence Island - Colombian Caribbean</p>
+              <p className={language === "EN" ? "text-display" : "text-hide"}>
+                Old Providence Island - Colombian Caribbean
+              </p>
+              <p className={language === "ES" ? "text-display" : "text-hide"}>
+                Isla Providencia - Caribe Colombiano
+              </p>
             </div>
           </div>
         </div>
@@ -168,11 +287,36 @@ const Career = ({ language }) => {
                 organization of supplies, and maintaining cleanliness in the
                 areas and all the equipment.
               </p>
+              <p className={language === "ES" ? "text-display" : "text-hide"}>
+                Los renombrados hermanos Roca, detrás del prestigioso Celler de
+                Can Roca en Girona, han llevado su experiencia culinaria a
+                Barcelona con el Restaurante Moo.
+              </p>
+              <p className={language === "ES" ? "text-display" : "text-hide"}>
+                Ubicado dentro del hotel más exclusivo de la ciudad, el Hotel
+                Omm, Moo ofrece una cocina de autor galardonada con estrellas
+                Michelin y vinos excepcionales, todo en un ambiente lujoso y
+                sofisticado.
+                <br /> <br />
+                Responsable del servicio y preparación del menú, mise en place,
+                organización de suministros y mantenimiento de la limpieza en
+                las áreas y en todo el equipo.
+              </p>
             </div>
             <div className="restaurant-location">
-              <p>Cook</p>
+              <p className={language === "EN" ? "text-display" : "text-hide"}>
+                Cook
+              </p>
+              <p className={language === "ES" ? "text-display" : "text-hide"}>
+                Cocinero
+              </p>
               <div className="divider"></div>
-              <p>Barcelona, Spain</p>
+              <p className={language === "EN" ? "text-display" : "text-hide"}>
+                Barcelona, Spain
+              </p>
+              <p className={language === "ES" ? "text-display" : "text-hide"}>
+                Barcelona, España
+              </p>
             </div>
           </div>
         </div>
@@ -202,11 +346,39 @@ const Career = ({ language }) => {
                 administrative tasks, sales, employees training and team
                 recruitment for the company.
               </p>
+              <p className={language === "ES" ? "text-display" : "text-hide"}>
+                Negocio enfocado en la producción de caldo de huesos orgánico
+                para uso culinario y terapéutico. <br /> <br />
+                El proyecto se sustenta en los pilares de la sostenibilidad,
+                productos orgánicos de origen local, trazabilidad de los
+                insumos, y la creación de productos de la más alta calidad que
+                contribuyen a la salud de quienes los consumen.
+              </p>
+              <p className={language === "ES" ? "text-display" : "text-hide"}>
+                Primario nace de la búsqueda de opciones alimentarias naturales
+                que potencien las capacidades regenerativas del cuerpo, al mismo
+                tiempo que elevan el sabor de las creaciones culinarias. <br />{" "}
+                <br />
+                Para más información: @1primario <br /> <br /> Encargado del
+                desarrollo de productos, producción, relaciones con proveedores,
+                tareas administrativas, ventas, capacitación de empleados y
+                reclutamiento de equipo para la empresa.
+              </p>
             </div>
             <div className="restaurant-location">
-              <p>Personal Project</p>
+              <p className={language === "EN" ? "text-display" : "text-hide"}>
+                Personal Project
+              </p>
+              <p className={language === "ES" ? "text-display" : "text-hide"}>
+                Proyecto Personal
+              </p>
               <div className="divider"></div>
-              <p>Owned Business</p>
+              <p className={language === "EN" ? "text-display" : "text-hide"}>
+                Owned Business
+              </p>
+              <p className={language === "ES" ? "text-display" : "text-hide"}>
+                Negocio Propio
+              </p>
               <div className="divider"></div>
               <p>Bogotá, Colombia</p>
             </div>
