@@ -70,6 +70,7 @@
   top: 0;
   left: 0;
   padding: 60px 220px;
+  z-index: 500;
 }
 
 .navbar-menu {
@@ -383,23 +384,31 @@
 
 /*--------------CAREER PAGE STYLES-----------------*/
 
+/* Base styles for all restaurants */
 .restaurant {
+  position: absolute; /* Ensure all restaurant containers are on top of each other */
+  top: 0;
+  left: 0;
   height: 100vh;
   width: 100vw;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* Makes the background fixed during scrolling */
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Prevents horizontal scrolling */
-  display: none;
-}
+  background-attachment: fixed;
 
-.restaurant-show {
+  opacity: 0; /* Hidden by default */
+  visibility: hidden; /* Prevent interaction when hidden */
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+/* Show only the active restaurant */
+.restaurant-show {
+  opacity: 1; /* Fully visible */
+  visibility: visible; /* Allows interaction */
 }
 
 .el-celler {
@@ -419,7 +428,7 @@
 }
 
 .moo {
-  background-image: url("restaurants/MooRestaurante.jpg");
+  background-image: url("restaurants/MooRestaurant.jpg");
 }
 
 .primario {
@@ -438,22 +447,62 @@
   gap: 10px;
 }
 
+.filter-container h1 {
+  font-size: 54px;
+  font-weight: 500;
+  letter-spacing: 10px;
+}
+
 .filter-container h2 {
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 300;
   letter-spacing: 10px;
-  margin-bottom: 60px;
+  margin-bottom: 70px;
 }
 
 .career-navbar {
-  display: flex;
+  display: grid;
   justify-content: space-between;
   align-items: center;
-  width: 70vw;
-  padding: 0 40px;
-  position: absolute;
-  bottom: 100px;
-  padding: 60px 20px;
+
+  grid-template-columns: repeat(6, 180px);
+  grid-template-rows: 70px;
+  bottom: 50px;
+  position: fixed; /* Fix the navbar position relative to the viewport */
+  /* 100px above the bottom of the screen */
+  left: 50%; /* Move the left edge to the center of the screen */
+  transform: translateX(
+    -50%
+  ); /* Translate it left by 50% of its own width to center */
+  gap: 0;
+  column-gap: 0;
+  background-color: #fff2de2a;
+}
+
+.career-navbar-item {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 22px 20px;
+  justify-content: center;
+}
+
+.luxury-navbar {
+  padding: 10px 20px;
+}
+
+.career-navbar-item h1 {
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 5px;
+  color: var(--quaternary-color);
+  text-wrap: nowrap;
+}
+
+.restaurant-highlight {
+  background-color: var(--primary-color);
 }
 
 .restaurant-description {
@@ -465,7 +514,7 @@
 .restaurant-description p {
   width: 350px;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 1px;
   line-height: 22px;
 }
@@ -479,6 +528,26 @@
   height: fit-content;
 }
 
+.primario-logo {
+  width: 400px;
+  height: fit-content;
+  margin-bottom: 40px;
+}
+
+.monasterio-logo {
+  width: 200px;
+  height: fit-content;
+}
+
+.monasterio-h2 {
+  margin-left: 15px;
+}
+
+.juana-logo {
+  width: 350px;
+  height: fit-content;
+}
+
 .restaurant-location {
   display: flex;
   gap: 10px;
@@ -486,6 +555,13 @@
   font-weight: 300;
   align-items: center;
   justify-content: center;
+  bottom: 140px;
+  position: fixed; /* Fix the navbar position relative to the viewport */
+  /* 100px above the bottom of the screen */
+  left: 50%; /* Move the left edge to the center of the screen */
+  transform: translateX(
+    -50%
+  ); /* Translate it left by 50% of its own width to center */
 }
 
 .divider {
@@ -497,4 +573,13 @@
 
 .restaurant-hide {
   display: none;
+}
+
+.celler-logo-navbar {
+  width: 150px !important;
+  height: fit-content !important;
+}
+
+.navbar-logos {
+  height: 100%;
 }
