@@ -1,17 +1,39 @@
 import { NavLink, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 import "./../App.css";
 import PropTypes from "prop-types";
 
 function Navbar({ language, setLanguage }) {
-  // Function to toggle language
   const toggleLanguage = lang => {
     setLanguage(lang);
   };
 
   const location = useLocation();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Function to handle scrolling
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    if (scrollPosition > window.innerHeight - 120) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <div className="navbar">
+    <div
+      className={`${location.pathname !== "/" ? "navbar-home" : "navbar"} ${
+        isScrolled ? "navbar-scrolled" : ""
+      }`}
+    >
       <div className="navbar-menu">
         {location.pathname !== "/" && (
           <NavLink to="/" className="home-item">
@@ -19,7 +41,6 @@ function Navbar({ language, setLanguage }) {
             <p>PERRY</p>
           </NavLink>
         )}
-
         <NavLink className="menu-item" to="/services" activeClassName="active">
           {language === "EN" ? "SERVICES" : "SERVICIOS"}
         </NavLink>

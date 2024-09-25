@@ -60,19 +60,44 @@
 /*Website styles*/
 
 /*--------NAVBAR STYLES--------*/
+/* Sticky Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100vw;
+  position: absolute; /* Change to fixed for sticky behavior */
+  top: 0;
+  left: 0;
+  padding: 40px 220px;
+  z-index: 500;
+  background-color: transparent; /* Initial background is transparent */
+  transition: background-color 0.3s ease;
+}
 
+/* Navbar home with adjusted padding */
+.navbar-home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
   position: absolute;
   top: 0;
   left: 0;
-  padding: 40px 50px;
+  padding: 30px 220px 30px 90px;
   z-index: 500;
+  background-color: transparent;
+  transition: background-color 0.5s ease;
 }
 
+/* Change background color when scrolled */
+.navbar-scrolled {
+  background-color: var(--primary-color); /* Background when scrolled */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+  position: fixed;
+}
+
+/* Navbar menu styles remain the same */
 .navbar-menu {
   display: flex;
   gap: 40px;
@@ -84,6 +109,7 @@
   color: var(--quaternary-color);
   font-size: 10px;
   font-weight: 500;
+  line-height: 25px;
 }
 
 .home-item {
@@ -103,10 +129,11 @@
   background-color: var(--quaternary-color);
   color: var(--primary-color);
   font-weight: 500;
-  padding: 5px 25px;
+  padding: 0px 25px;
   border-radius: 50px;
 }
 
+/* Language toggle styles remain the same */
 .language-toggle {
   display: flex;
   gap: 10px;
@@ -130,14 +157,8 @@
   cursor: pointer;
 }
 
-.language-toggle button span {
-  line-height: 10px;
-  font-size: 12px;
-}
-
 .language-toggle .active-language {
   padding: 5px 15px;
-
   background-color: var(--quaternary-color);
   color: var(--primary-color);
   border-radius: 50px;
@@ -150,8 +171,6 @@
   color: var(--quaternary-color);
   border-radius: 50px;
   font-weight: bold;
-
-  border: none;
 }
 
 /*--------HOME PAGE STYLES----------*/
