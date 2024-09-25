@@ -18,12 +18,7 @@ const Career = ({ language }) => {
         >
           <div className="filter-container">
             <img className="celler-logo" src="logos/logo1.png" />
-            <h2 className={language === "EN" ? "text-display" : "text-hide"}>
-              RESTAURANT
-            </h2>
-            <h2 className={language === "ES" ? "text-display" : "text-hide"}>
-              RESTAURANTE
-            </h2>
+
             <div className="restaurant-description">
               <p className={language === "EN" ? "text-display" : "text-hide"}>
                 Founded in 1986, this prestigious three Michelin Star restaurant
@@ -78,12 +73,7 @@ const Career = ({ language }) => {
         >
           <div className="filter-container">
             <img className="juana-logo" src="logos/logo4.png" />
-            <h2 className={language === "EN" ? "text-display" : "text-hide"}>
-              RESTAURANT
-            </h2>
-            <h2 className={language === "ES" ? "text-display" : "text-hide"}>
-              RESTAURANTE
-            </h2>
+
             <div className="restaurant-description">
               <p className={language === "EN" ? "text-display" : "text-hide"}>
                 The inaugural project of the renowned Spanish group Tragaluz in
@@ -139,12 +129,7 @@ const Career = ({ language }) => {
         >
           <div className="filter-container">
             <h1>LUXURY YACHTS</h1>
-            <h2 className={language === "EN" ? "text-display" : "text-hide"}>
-              RESTAURANT
-            </h2>
-            <h2 className={language === "ES" ? "text-display" : "text-hide"}>
-              RESTAURANTE
-            </h2>
+
             <div className="restaurant-description">
               <p className={language === "EN" ? "text-display" : "text-hide"}>
                 As a private chef on luxury yachts, bespoke dining experiences
@@ -201,7 +186,7 @@ const Career = ({ language }) => {
         >
           <div className="filter-container">
             <img className="monasterio-logo" src="logos/Logo3.png" />
-            <h2 className="monasterio-h2">HOTEL</h2>
+
             <div className="restaurant-description">
               <p className={language === "EN" ? "text-display" : "text-hide"}>
                 Boutique hotel located on a remote island in the Caribbean Ocean
@@ -271,7 +256,7 @@ const Career = ({ language }) => {
         >
           <div className="filter-container">
             <h1>MOO RESTAURANT</h1>
-            <h2>HOTEL OMM</h2>
+
             <div className="restaurant-description">
               <p className={language === "EN" ? "text-display" : "text-hide"}>
                 The renowned Roca brothers, behind the prestigious Celler de Can
