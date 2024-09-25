@@ -69,7 +69,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  padding: 40px 220px;
+  padding: 40px 50px;
   z-index: 500;
 }
 
@@ -92,7 +92,7 @@
   font-weight: 300;
   letter-spacing: 8px;
   color: var(--quaternary-color);
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .home-item:hover {

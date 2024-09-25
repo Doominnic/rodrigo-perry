@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "./../App.css";
 import PropTypes from "prop-types";
 
@@ -8,13 +8,18 @@ function Navbar({ language, setLanguage }) {
     setLanguage(lang);
   };
 
+  const location = useLocation();
+
   return (
     <div className="navbar">
       <div className="navbar-menu">
-        <NavLink to="/" className="home-item">
-          <p>RODRIGO</p>
-          <p>PERRY</p>
-        </NavLink>
+        {location.pathname !== "/" && (
+          <NavLink to="/" className="home-item">
+            <p>RODRIGO</p>
+            <p>PERRY</p>
+          </NavLink>
+        )}
+
         <NavLink className="menu-item" to="/services" activeClassName="active">
           {language === "EN" ? "SERVICES" : "SERVICIOS"}
         </NavLink>
