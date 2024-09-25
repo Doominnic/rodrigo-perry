@@ -25,6 +25,10 @@ const About = ({ language }) => {
           como España, Italia, Francia y Portugal, así como en el Caribe.
         </p>
       </div>
+      <div className="read-more">
+        <p>Read More</p>
+        <img src="icons/flechita.png" />
+      </div>
       <div className="section-2">
         <div className="sub-section-1">
           <p

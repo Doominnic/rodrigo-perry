@@ -83,7 +83,20 @@
   letter-spacing: 5px;
   color: var(--quaternary-color);
   font-size: 10px;
+  font-weight: 500;
+}
+
+.home-item {
+  display: flex;
+  flex-direction: column;
   font-weight: 300;
+  letter-spacing: 8px;
+  color: var(--quaternary-color);
+  font-size: 8px;
+}
+
+.home-item:hover {
+  color: var(--quaternary-color);
 }
 
 .menu-item.active {
@@ -207,7 +220,7 @@
   margin-bottom: 20px;
 }
 
-.contact-box-1 p:first-of-type {
+.contact-box-1 a:first-of-type {
   margin-top: 60px;
 }
 
@@ -232,6 +245,12 @@
   display: flex;
   align-items: center;
   gap: 15px;
+  color: var(--quaternary-color);
+  text-decoration: none;
+}
+
+.contact-info:hover {
+  color: var(--tertiary-color);
 }
 
 .ig-icon {
@@ -377,6 +396,16 @@
   display: flex;
   flex-direction: column;
   gap: 45px;
+}
+
+.read-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -170px;
+  color: var(--quaternary-color);
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
 /*--------------CAREER PAGE STYLES-----------------*/

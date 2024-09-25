@@ -11,11 +11,15 @@ function Navbar({ language, setLanguage }) {
   return (
     <div className="navbar">
       <div className="navbar-menu">
+        <NavLink to="/" className="home-item">
+          <p>RODRIGO</p>
+          <p>PERRY</p>
+        </NavLink>
         <NavLink className="menu-item" to="/services" activeClassName="active">
           {language === "EN" ? "SERVICES" : "SERVICIOS"}
         </NavLink>
         <NavLink className="menu-item" to="/career" activeClassName="active">
-          {language === "EN" ? "CAREER" : "CARRERA"}
+          {language === "EN" ? "CAREER" : "TRAYECTORIA"}
         </NavLink>
         <NavLink className="menu-item" to="/about" activeClassName="active">
           {language === "EN" ? "ABOUT" : "ACERCA"}

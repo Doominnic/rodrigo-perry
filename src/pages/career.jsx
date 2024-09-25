@@ -2,7 +2,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 
 const Career = ({ language }) => {
-  const [restaurant, setRestaurant] = useState("celler");
+  const [restaurant, setRestaurant] = useState("primario");
 
   const toggleRestaurant = rest => {
     setRestaurant(rest);
@@ -381,14 +381,11 @@ const Career = ({ language }) => {
         </div>
         <div
           className={`career-navbar-item ${
-            restaurant === "celler" ? "restaurant-highlight" : ""
+            restaurant === "luxury" ? "restaurant-highlight" : ""
           }`}
-          onClick={() => toggleRestaurant("celler")}
+          onClick={() => toggleRestaurant("luxury")}
         >
-          <img
-            className="navbar-logos celler-logo-navbar"
-            src="logos/logo1.png"
-          />
+          <h1>LUXURY YATCHS</h1>
         </div>
         <div
           className={`career-navbar-item luxury-navbar ${
@@ -400,20 +397,24 @@ const Career = ({ language }) => {
         </div>
         <div
           className={`career-navbar-item ${
-            restaurant === "luxury" ? "restaurant-highlight" : ""
-          }`}
-          onClick={() => toggleRestaurant("luxury")}
-        >
-          <h1>LUXURY YATCH</h1>
-        </div>
-        <div
-          className={`career-navbar-item ${
             restaurant === "juana" ? "restaurant-highlight" : ""
           }`}
           onClick={() => toggleRestaurant("juana")}
         >
           <img className="navbar-logos" src="logos/logo4.png" />
         </div>
+        <div
+          className={`career-navbar-item ${
+            restaurant === "celler" ? "restaurant-highlight" : ""
+          }`}
+          onClick={() => toggleRestaurant("celler")}
+        >
+          <img
+            className="navbar-logos celler-logo-navbar"
+            src="logos/logo1.png"
+          />
+        </div>
+
         <div
           className={`career-navbar-item ${
             restaurant === "moo" ? "restaurant-highlight" : ""
