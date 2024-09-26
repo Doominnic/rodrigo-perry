@@ -75,26 +75,12 @@
   transition: background-color 0.3s ease;
 }
 
-/* Navbar home with adjusted padding */
-.navbar-home {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100vw;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 30px 220px 30px 90px;
-  z-index: 500;
-  background-color: transparent;
-  transition: background-color 0.5s ease;
-}
-
 /* Change background color when scrolled */
 .navbar-scrolled {
   background-color: var(--primary-color); /* Background when scrolled */
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
   position: fixed;
+  padding: 20px 220px;
 }
 
 /* Navbar menu styles remain the same */
@@ -119,6 +105,13 @@
   letter-spacing: 8px;
   color: var(--quaternary-color);
   font-size: 10px;
+  position: absolute;
+  top: 35px;
+  left: 100px;
+}
+
+.home-item-scrolled {
+  top: 18px;
 }
 
 .home-item:hover {
@@ -155,6 +148,7 @@
   justify-content: center;
   border: none;
   cursor: pointer;
+  font-size: 10px;
 }
 
 .language-toggle .active-language {
@@ -326,6 +320,14 @@
 
 .text-display {
   display: block;
+}
+
+.text-display a {
+  color: var(--quaternary-color);
+}
+
+.text-display a:hover {
+  color: var(--tertiary-color);
 }
 
 .text-hide {
@@ -630,4 +632,44 @@
 
 .navbar-logos {
   height: 100%;
+}
+
+/*-----------------------------------------------------------*/
+/*------------------- RESPONSIVE STYLES -----------------------*/
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .navbar {
+    padding: clamp(40px, 3vw, 40px) clamp(160px, 13vw, 220px);
+  }
+
+  .navbar-scrolled {
+    padding: clamp(20px, 3vw, 20px) clamp(160px, 13vw, 220px);
+  }
+
+  .navbar-menu {
+    gap: clamp(30px, 2vw, 40px);
+  }
+
+  .home-item {
+    left: clamp(20px, 4.5vw, 80px);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .navbar {
+    padding: clamp(40px, 3vw, 40px) clamp(120px, 20vw, 150px);
+    padding-right: clamp(70px, 1vw, 140px);
+  }
+
+  .navbar-menu .menu-item {
+    font-size: clamp(5px, 1vw, 10px);
+  }
+
+  .navbar-menu {
+    gap: clamp(10px, 2vw, 30px);
+  }
+
+  .home-item {
+    left: clamp(20px, 5vw, 30px);
+  }
 }

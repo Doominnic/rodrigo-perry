@@ -29,14 +29,13 @@ function Navbar({ language, setLanguage }) {
   }, []);
 
   return (
-    <div
-      className={`${location.pathname !== "/" ? "navbar-home" : "navbar"} ${
-        isScrolled ? "navbar-scrolled" : ""
-      }`}
-    >
+    <div className={`navbar ${isScrolled ? "navbar-scrolled" : ""}`}>
       <div className="navbar-menu">
         {location.pathname !== "/" && (
-          <NavLink to="/" className="home-item">
+          <NavLink
+            to="/"
+            className={`home-item ${isScrolled ? "home-item-scrolled" : ""}`}
+          >
             <p>RODRIGO</p>
             <p>PERRY</p>
           </NavLink>

@@ -326,10 +326,13 @@ const Career = ({ language }) => {
                 Primario originates from the pursuit of natural food options
                 that enhance the body’s regenerative powers while also elevating
                 the flavor of culinary creations. <br /> <br />
-                For more information: @1primario <br /> <br /> In charge of
-                product development, production, supplier relationships,
-                administrative tasks, sales, employees training and team
-                recruitment for the company.
+                For more information:{" "}
+                <a href="https://www.instagram.com/1primario/">
+                  @1primario
+                </a>{" "}
+                <br /> <br /> In charge of product development, production,
+                supplier relationships, administrative tasks, sales, employees
+                training and team recruitment for the company.
               </p>
               <p className={language === "ES" ? "text-display" : "text-hide"}>
                 Negocio enfocado en la producción de caldo de huesos orgánico
