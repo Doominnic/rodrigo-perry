@@ -105,7 +105,9 @@ function Navbar({ language, setLanguage }) {
           >
             {language === "EN" ? "CONTACT" : "CONTACTO"}
           </NavLink>
-          <p className="mobile-menu-logo">RODRIGO PERRY</p>
+          <NavLink to="/" className="mobile-menu-logo">
+            RODRIGO PERRY
+          </NavLink>
         </div>
         <div className="navbar-menu-list">
           {location.pathname !== "/" && (

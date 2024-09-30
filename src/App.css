@@ -688,12 +688,13 @@
     font-size: clamp(5px, 1vw, 10px);
   }
 
-  .navbar-menu {
+  .navbar-menu-list {
     gap: clamp(10px, 2vw, 30px);
   }
 
   .home-item {
     left: clamp(20px, 5vw, 30px);
+    font-size: clamp(7px, 1vw, 10px);
   }
 
   .menu-item.active {
@@ -703,11 +704,12 @@
 
 @media screen and (min-width: 320px) and (max-width: 426px) {
   .navbar {
-    padding: 30px clamp(20px, 20vw, 50px);
+    padding: 30px clamp(20px, 20vw, 30px);
   }
 
   .language-toggle {
     z-index: 500;
+    font-size: 8px;
   }
 
   .menu-mobile-icon {
@@ -776,5 +778,102 @@
     color: var(--quaternary-color);
     font-size: 8px;
     margin-top: 120px;
+  }
+
+  .home-page {
+    flex-direction: column;
+    padding: 20vh 12vw;
+  }
+
+  .home-page h1 {
+    font-size: 20px;
+    letter-spacing: 25px;
+  }
+
+  .text-display-about {
+    width: 250px;
+    font-size: 12px;
+    letter-spacing: 0.2px;
+    line-height: 14px;
+    margin-left: -30px;
+  }
+
+  .section-2 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .sub-section-1 {
+    padding: 0;
+  }
+
+  .chef-image-about {
+    width: 300px;
+    height: 300px;
+  }
+
+  .plate-1 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .text-display-section-2 {
+    width: 200px;
+    font-size: 12px;
+    line-height: 14px;
+    margin-left: 0;
+    margin-bottom: 20px;
+    margin-left: 30px;
+  }
+
+  .section-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .plate-2-container {
+    grid-row: 2;
+    padding: 0;
+  }
+
+  .sub-section-2 {
+    flex-direction: row;
+    width: 100vw;
+    gap: 0;
+  }
+
+  .text-display-section-3 {
+    font-size: 12px;
+    line-height: 14px;
+    align-content: end;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+
+  .contact-page {
+    justify-content: end;
+  }
+
+  .contact-box-1,
+  .contact-box-2 {
+    width: 250px;
+    margin-left: 25vw;
+  }
+
+  .contact-box-2 {
+    margin-bottom: 70px;
+  }
+
+  .contact-box-1 h1 {
+    font-size: 16px;
+    letter-spacing: 15px;
+  }
+
+  .contact-box-1 a {
+    font-size: 12px;
+    font-weight: 100;
+  }
+
+  .contact-box-1 a:first-of-type {
+    margin-top: 40px;
   }
 }
