@@ -90,6 +90,16 @@
   align-items: center;
 }
 
+.navbar-menu-list {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.menu-mobile-icon {
+  display: none;
+}
+
 .navbar-menu .menu-item {
   letter-spacing: 5px;
   color: var(--quaternary-color);
@@ -165,6 +175,15 @@
   color: var(--quaternary-color);
   border-radius: 50px;
   font-weight: bold;
+}
+
+.hamburguer-icon,
+.close-icon {
+  display: none;
+}
+
+.hide-mobile {
+  display: none;
 }
 
 /*--------HOME PAGE STYLES----------*/
@@ -653,6 +672,10 @@
   .home-item {
     left: clamp(20px, 4.5vw, 80px);
   }
+
+  .menu-item.active {
+    padding: 0px 15px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -671,5 +694,87 @@
 
   .home-item {
     left: clamp(20px, 5vw, 30px);
+  }
+
+  .menu-item.active {
+    padding: 0px 10px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 426px) {
+  .navbar {
+    padding: 30px clamp(20px, 20vw, 50px);
+  }
+
+  .language-toggle {
+    z-index: 500;
+  }
+
+  .menu-mobile-icon {
+    display: block;
+  }
+
+  .hamburguer-icon,
+  .close-icon {
+    width: 40px;
+    color: var(--quaternary-color);
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 500;
+  }
+
+  .icon-off {
+    display: none;
+  }
+
+  .navbar-menu-list {
+    display: none;
+  }
+
+  .show-menu {
+    display: block;
+  }
+
+  .home-item {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    gap: 30px;
+  }
+
+  .mobile-item.active {
+    color: #3b3f3a;
+  }
+
+  .hide-mobile-menu {
+    display: none;
+  }
+
+  .mobile-item {
+    letter-spacing: 1px;
+    color: var(--quaternary-color);
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  .mobile-menu-logo {
+    font-weight: 300;
+    letter-spacing: 8px;
+    color: var(--quaternary-color);
+    font-size: 8px;
+    margin-top: 120px;
   }
 }

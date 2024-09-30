@@ -10,6 +10,7 @@ function Navbar({ language, setLanguage }) {
 
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   // Function to handle scrolling
   const handleScroll = () => {
@@ -19,6 +20,10 @@ function Navbar({ language, setLanguage }) {
     } else {
       setIsScrolled(false);
     }
+  };
+
+  const handleMenuOpen = () => {
+    setMenuOpen(!menuOpen);
   };
 
   useEffect(() => {
@@ -31,30 +36,107 @@ function Navbar({ language, setLanguage }) {
   return (
     <div className={`navbar ${isScrolled ? "navbar-scrolled" : ""}`}>
       <div className="navbar-menu">
-        {location.pathname !== "/" && (
-          <NavLink
-            to="/"
-            className={`home-item ${isScrolled ? "home-item-scrolled" : ""}`}
+        <div className="menu-mobile-icon" onClick={handleMenuOpen}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="white"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+            className={!menuOpen ? "hamburguer-icon" : "icon-off"}
           >
-            <p>RODRIGO</p>
-            <p>PERRY</p>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+            className={menuOpen ? "close-icon" : "icon-off"}
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </div>
+        <div
+          className={`hide-mobile ${
+            menuOpen ? "mobile-menu" : "hide-mobile-menu"
+          }`}
+          onClick={handleMenuOpen}
+        >
+          <NavLink
+            className="mobile-item"
+            to="/services"
+            activeClassName="active"
+          >
+            {language === "EN" ? "SERVICES" : "SERVICIOS"}
           </NavLink>
-        )}
-        <NavLink className="menu-item" to="/services" activeClassName="active">
-          {language === "EN" ? "SERVICES" : "SERVICIOS"}
-        </NavLink>
-        <NavLink className="menu-item" to="/career" activeClassName="active">
-          {language === "EN" ? "CAREER" : "TRAYECTORIA"}
-        </NavLink>
-        <NavLink className="menu-item" to="/about" activeClassName="active">
-          {language === "EN" ? "ABOUT" : "ACERCA"}
-        </NavLink>
-        <NavLink className="menu-item" to="/gallery" activeClassName="active">
-          {language === "EN" ? "GALLERY" : "GALERÍA"}
-        </NavLink>
-        <NavLink className="menu-item" to="/contact" activeClassName="active">
-          {language === "EN" ? "CONTACT" : "CONTACTO"}
-        </NavLink>
+          <NavLink
+            className="mobile-item"
+            to="/career"
+            activeClassName="active"
+          >
+            {language === "EN" ? "CAREER" : "TRAYECTORIA"}
+          </NavLink>
+          <NavLink className="mobile-item" to="/about" activeClassName="active">
+            {language === "EN" ? "ABOUT" : "ACERCA"}
+          </NavLink>
+          <NavLink
+            className="mobile-item"
+            to="/gallery"
+            activeClassName="active"
+          >
+            {language === "EN" ? "GALLERY" : "GALERÍA"}
+          </NavLink>
+          <NavLink
+            className="mobile-item"
+            to="/contact"
+            activeClassName="active"
+          >
+            {language === "EN" ? "CONTACT" : "CONTACTO"}
+          </NavLink>
+          <p className="mobile-menu-logo">RODRIGO PERRY</p>
+        </div>
+        <div className="navbar-menu-list">
+          {location.pathname !== "/" && (
+            <NavLink
+              to="/"
+              className={`home-item ${isScrolled ? "home-item-scrolled" : ""}`}
+            >
+              <p>RODRIGO</p>
+              <p>PERRY</p>
+            </NavLink>
+          )}
+          <NavLink
+            className="menu-item"
+            to="/services"
+            activeClassName="active"
+          >
+            {language === "EN" ? "SERVICES" : "SERVICIOS"}
+          </NavLink>
+          <NavLink className="menu-item" to="/career" activeClassName="active">
+            {language === "EN" ? "CAREER" : "TRAYECTORIA"}
+          </NavLink>
+          <NavLink className="menu-item" to="/about" activeClassName="active">
+            {language === "EN" ? "ABOUT" : "ACERCA"}
+          </NavLink>
+          <NavLink className="menu-item" to="/gallery" activeClassName="active">
+            {language === "EN" ? "GALLERY" : "GALERÍA"}
+          </NavLink>
+          <NavLink className="menu-item" to="/contact" activeClassName="active">
+            {language === "EN" ? "CONTACT" : "CONTACTO"}
+          </NavLink>
+        </div>
       </div>
       <div className="language-toggle">
         <button
