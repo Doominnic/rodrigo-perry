@@ -934,12 +934,16 @@
 
   .career-navbar-item {
     cursor: pointer;
-    width: 160px;
+    width: 100%;
     height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
+    padding: 0 15px;
+  }
+
+  .career-navbar-item h1 {
+    font-size: 8px;
   }
 
   .swipe-wrapper {
@@ -947,7 +951,7 @@
   }
 
   .restaurant-highlight {
-    background-color: transparent;
+    background-color: var(--primary-color);
   }
 
   .navbar-logos {
@@ -979,5 +983,9 @@
 
   .swiper-slide .career-navbar-item h1 {
     text-wrap: nowrap;
+  }
+
+  .celler-slider {
+    width: 120px;
   }
 }

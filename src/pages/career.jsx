@@ -436,7 +436,10 @@ const Career = ({ language }) => {
                 restaurant === "celler" ? "restaurant-highlight" : ""
               }`}
             >
-              <img className="navbar-logos" src="logos/logo1.png" />
+              <img
+                className="navbar-logos celler-slider"
+                src="logos/logo1.png"
+              />
             </div>
           </SwiperSlide>
 
