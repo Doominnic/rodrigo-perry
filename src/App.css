@@ -934,13 +934,15 @@
 
   .career-navbar-item {
     cursor: pointer;
-    width: 100px;
+    width: 100%;
     height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .swipe-wrapper {
     background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
   }
 
   .restaurant-highlight {
@@ -949,6 +951,28 @@
 
   .navbar-logos {
     width: 60px;
-    height: fit-content;
+    height: auto;
+  }
+
+  .filter-container img:first-of-type {
+    margin-top: -50px;
+  }
+
+  .filter-container h1:first-of-type {
+    margin-top: -50px;
+    text-align: center;
+    font-size: 36px;
+  }
+
+  .monasterio-logo {
+    width: 100px;
+  }
+
+  .juana-logo {
+    width: 200px;
+  }
+
+  .celler-logo {
+    width: 380px;
   }
 }
