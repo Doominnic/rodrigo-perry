@@ -876,4 +876,19 @@
   .contact-box-1 a:first-of-type {
     margin-top: 40px;
   }
+
+  .restaurant-description {
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  .text-display {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .primario-logo {
+    width: 300px;
+  }
 }
