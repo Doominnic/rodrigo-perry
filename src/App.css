@@ -883,7 +883,7 @@
 
   .restaurant-description {
     flex-direction: column;
-    gap: 40px;
+    gap: 25px;
     margin-top: 30px;
     margin-bottom: 50px;
   }
@@ -914,11 +914,11 @@
   }
 
   .swiper {
-    top: 80vh;
+    top: 75vh;
   }
 
   .swiper-container {
-    width: 100%;
+    width: 150px;
     height: 100px;
     position: fixed;
     bottom: 50px;
@@ -955,11 +955,11 @@
   }
 
   .filter-container img:first-of-type {
-    margin-top: -100px;
+    margin-top: -130px;
   }
 
   .filter-container h1:first-of-type {
-    margin-top: -100px;
+    margin-top: -150px;
     text-align: center;
     font-size: 26px;
   }
