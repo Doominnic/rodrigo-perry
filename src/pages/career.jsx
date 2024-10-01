@@ -40,30 +40,30 @@ const Career = ({ language }) => {
               <p className={language === "EN" ? "text-display" : "text-hide"}>
                 Founded in 1986, this prestigious three Michelin Star restaurant
                 is helmed by the renowned Roca brothers: Joan, the head chef;
-                Josep, the sommelier; and Jordi, the pastry chef.
+                Josep, the sommelier; and Jordi, the pastry chef. Specializing
+                in traditional Catalan cuisine, the restaurant earned global
+                acclaim by being named the best in the world in the “The World’s
+                50 Best Restaurants” list by Restaurant magazine in both 2013
+                and 2015.
               </p>
               <p className={language === "EN" ? "text-display" : "text-hide"}>
-                Specializing in traditional Catalan cuisine, the restaurant
-                earned global acclaim by being named the best in the world in
-                the {`"`}
-                The World{`'`}s 50 Best Restaurants{`"`} list by Restaurant
-                magazine in both 2013 and 2015. Responsible for menu service and
-                preparation, mise en place, organization of supplies, and
-                maintaining cleanliness in the areas and all the equipment.
+                In charge of the service and menu preparation, mise en place,
+                organization of supplies, and maintaining cleanliness in the
+                areas and all the equipment.
               </p>
               <p className={language === "ES" ? "text-display" : "text-hide"}>
                 Fundado en 1986, este prestigioso restaurante con tres estrellas
-                Michelin está dirigido por los renombrados hermanos Roca: Joan,
-                el chef principal; Josep, el sommelier; y Jordi, el chef de
-                repostería.
+                Michelin es dirigido por los reconocidos hermanos Roca: Joan,
+                chef principal; Josep, sumiller; y Jordi, chef de pastelería.
+                Especializado en cocina tradicional catalana, el restaurante ha
+                ganado reconocimiento mundial al ser nombrado el mejor del mundo
+                en la lista {`"`}The World’s 50 Best Restaurants{`"`} de la
+                revista Restaurant en 2013 y 2015.
               </p>
               <p className={language === "ES" ? "text-display" : "text-hide"}>
-                Especializado en la cocina tradicional catalana, el restaurante
-                alcanzó fama mundial al ser nombrado el mejor del mundo en la
-                lista de “Los 50 Mejores Restaurantes del Mundo” de la revista
-                Restaurant en 2013 y 2015. Responsable del servicio y
-                preparación del menú, mise en place, organización de suministros
-                y mantenimiento de la limpieza en las áreas y todo el equipo.
+                Responsable del servicio y preparación del menú, mise en place,
+                organización de suministros y conservación de la limpieza en las
+                áreas de cocina y los equipos.
               </p>
             </div>
             <div className="restaurant-location">
@@ -104,27 +104,29 @@ const Career = ({ language }) => {
                 earning Juana la Loca the Wallpaper* Design Award for Best
                 Restaurant in 2016.
                 <br /> <br />
-                Active participant in the restaurant opening and Chef
-                responsible for kitchen management, supplier relations, menu
-                creation, mise en place preparation, service, and company
+                For the opening process, responsible for recipe costing,
+                selection and training of staff, equipment purchasing, and menu
+                creation. Subsequently, chef in charge of kitchen management,
+                supplier relations, mise en place preparation, and external
                 catering.
               </p>
               <p className={language === "ES" ? "text-display" : "text-hide"}>
                 El proyecto inaugural del renombrado grupo español Tragaluz en
-                Colombia, Juana la Loca, ofrece una cocina mediterránea con
-                especialidades como paella, cochinillo, pescados y ensaladas
+                Colombia, Juana la Loca, ofreció una cocina mediterránea con
+                especialidades como paella, cochinillo, pescado y ensaladas
                 frescas.
               </p>
               <p className={language === "ES" ? "text-display" : "text-hide"}>
-                La distintiva decoración, diseño y arquitectura del restaurante
-                fueron creados por el aclamado diseñador y arquitecto Isay
-                Weinfeld, lo que le valió a Juana la Loca el premio Wallpaper
-                Design Award al Mejor Restaurante en 2016.
+                La decoración, diseño y arquitectura distintivos del restaurante
+                fueron elaborados por el aclamado diseñador y arquitecto Isay
+                Weinfeld, lo que le valió a Juana la Loca el Wallpaper* Design
+                Award al Mejor Restaurante en 2016.
                 <br /> <br />
-                Participante activo en la apertura del restaurante y Chef
-                responsable de la gestión de la cocina, relaciones con
-                proveedores, creación de menús, preparación de mise en place,
-                servicio y catering de la empresa.
+                Para el proceso de apertura, encargado del costeo de recetas,
+                selección y entrenamiento de personal, compra de equipos y
+                creación de menú. Posteriormente, chef responsable de la gestión
+                de la cocina, relaciones con proveedores, preparación de mise en
+                place y catering externo.
               </p>
             </div>
             <div className="restaurant-location">
@@ -156,27 +158,22 @@ const Career = ({ language }) => {
               </p>
               <p className={language === "EN" ? "text-display" : "text-hide"}>
                 Gourmet meals are prepared with meticulous attention to guests
-                preferences, ensuring exceptional service within the yacht
-                {`'`}s elegant and intimate setting. This expertise has been
-                showcased across various regions in Europe and the Caribbean,
-                turning each meal into a memorable highlight of the voyage with
-                a focus on both impeccable presentation and exceptional taste.
+                {`'`}
+                preferences, ensuring exceptional service with a focus on both
+                impeccable presentation and taste.
               </p>
               <p className={language === "ES" ? "text-display" : "text-hide"}>
-                Como chef privado en yates de lujo, se crean experiencias
-                gastronómicas personalizadas para una clientela exclusiva. Se
-                diseñan menús exquisitos y personalizados, que reflejan los más
-                altos estándares de arte culinario, utilizando solo los mejores
-                ingredientes.
+                Como chef privado en yates de lujo, las experiencias
+                gastronómicas son totalmente personalizadas y hechas para
+                clientes exclusivos. Se elaboran menús únicos que reflejan los
+                más altos estándares de la gastronomía, utilizando solo los
+                mejores ingredientes.
               </p>
               <p className={language === "ES" ? "text-display" : "text-hide"}>
-                Las comidas gourmet se preparan con meticulosa atención a las
-                preferencias de los invitados, garantizando un servicio
-                excepcional en el entorno elegante e íntimo del yate. Esta
-                experiencia ha sido demostrada en diversas regiones de Europa y
-                el Caribe, convirtiendo cada comida en un momento memorable del
-                viaje, con un enfoque en una presentación impecable y un sabor
-                excepcional.
+                Las comidas se preparan con atención meticulosa a las
+                preferencias de los huéspedes, asegurando un servicio
+                excepcional con un enfoque tanto en la presentación impecable
+                como en el sabor excepcional.
               </p>
             </div>
             <div className="restaurant-location">
@@ -222,31 +219,24 @@ const Career = ({ language }) => {
                 closures; working directly with artisan fishermen and farmers
                 from around the island. Planning, training, and management of
                 the hotel employees.
-                <br /> <br /> In charge of menu development, restaurant service,
-                supplier relationships, administrative tasks, employees training
-                and team recruitment for the hotel.
               </p>
               <p className={language === "ES" ? "text-display" : "text-hide"}>
-                Hotel boutique ubicado en una isla remota del océano Caribe,
-                destacado por ofrecer una experiencia de lujo mezclada con la
+                Hotel boutique ubicado en una isla remota del Caribe el cual se
+                destacó por ofrecer una experiencia de lujo combinada con la
                 cultura local de la isla. El proyecto atrajo a turistas de alto
                 perfil de todo el mundo, interesados en una experiencia
-                auténtica, pero consciente y lujosa.
+                auténtica, consciente y de lujo.
                 <br /> <br />
-                El hotel fue elogiado en destacadas publicaciones
-                internacionales como Condé Nast, Financial Times: How to Spend,
+                El hotel recibió reconocimientos en importantes publicaciones
+                internacionales como Conde Nast, Financial Times: How to Spend,
                 Vogue y GQ, entre otras.
               </p>
               <p className={language === "ES" ? "text-display" : "text-hide"}>
-                Encargado de la creación de experiencias gastronómicas y del
-                desarrollo del menú basado en calendarios estacionales y vedas
-                de pesca, trabajando directamente con pescadores y agricultores
-                artesanales de la isla. Responsable de la planificación,
-                capacitación y gestión de los empleados del hotel.
-                <br /> <br /> También responsable del desarrollo de menús,
-                servicio de restaurante, relaciones con proveedores, tareas
-                administrativas, capacitación de empleados y reclutamiento de
-                equipo para el hotel.
+                Encargado de la creación de experiencias gastronómicas,
+                desarrollo del menú basado en calendarios de temporada y cierres
+                de pesca; trabajando directamente con pescadores y agricultores
+                artesanales de la isla. Planificación, capacitación y gestión
+                del equipo del hotel.
               </p>
             </div>
             <div className="restaurant-location">
@@ -261,7 +251,7 @@ const Career = ({ language }) => {
                 Old Providence Island - Colombian Caribbean
               </p>
               <p className={language === "ES" ? "text-display" : "text-hide"}>
-                Isla Providencia - Caribe Colombiano
+                Isla de Providencia - Caribe Colombiano
               </p>
             </div>
           </div>
@@ -277,32 +267,28 @@ const Career = ({ language }) => {
             <div className="restaurant-description">
               <p className={language === "EN" ? "text-display" : "text-hide"}>
                 The renowned Roca brothers, behind the prestigious Celler de Can
-                Roca in Girona, have brought their culinary expertise to
-                Barcelona with Moo Restaurant.
+                Roca in Girona, brought their culinary expertise to Barcelona
+                with Moo Restaurant. Located within the city’s most exclusive
+                hotel, Hotel Omm, Moo offers Michelin-starred signature cuisine
+                and exceptional wines, all within a luxurious and sophisticated
+                setting.
               </p>
               <p className={language === "EN" ? "text-display" : "text-hide"}>
-                Located within the city’s most exclusive hotel, Hotel Omm, Moo
-                offers Michelin-starred signature cuisine and exceptional wines,
-                all within a luxurious and sophisticated setting.
-                <br /> <br />
                 Responsible for menu service and preparation, mise en place,
                 organization of supplies, and maintaining cleanliness in the
                 areas and all the equipment.
               </p>
               <p className={language === "ES" ? "text-display" : "text-hide"}>
-                Los renombrados hermanos Roca, detrás del prestigioso Celler de
-                Can Roca en Girona, han llevado su experiencia culinaria a
-                Barcelona con el Restaurante Moo.
+                Los reconocidos hermanos Roca, detrás del prestigioso Celler de
+                Can Roca en Girona, llevaron su maestría culinaria a Barcelona
+                con el restaurante Moo. Ubicado dentro del exclusivo Hotel Omm,
+                Moo ofrece cocina de autor con estrella Michelin y vinos
+                excepcionales, todo en un entorno lujoso y sofisticado.
               </p>
               <p className={language === "ES" ? "text-display" : "text-hide"}>
-                Ubicado dentro del hotel más exclusivo de la ciudad, el Hotel
-                Omm, Moo ofrece una cocina de autor galardonada con estrellas
-                Michelin y vinos excepcionales, todo en un ambiente lujoso y
-                sofisticado.
-                <br /> <br />
                 Responsable del servicio y preparación del menú, mise en place,
-                organización de suministros y mantenimiento de la limpieza en
-                las áreas y en todo el equipo.
+                organización de suministros y conservación de la limpieza en las
+                áreas de cocina y los equipos.
               </p>
             </div>
             <div className="restaurant-location">
@@ -334,40 +320,34 @@ const Career = ({ language }) => {
               <p className={language === "EN" ? "text-display" : "text-hide"}>
                 Business focused on the production of organic bone broth for
                 culinary and therapeutic use. <br /> <br />
-                The project is sustained by the pillars of sustainability,
-                locally sourced organic produce, traceability of inputs, and the
-                creation of top quality products that contribute to the health
-                of those who consume it.
+                Based on the principles of sustainability, traceability of
+                supplies, and the use of organic products to support local
+                economies, Primario offers products of the highest quality that
+                contribute to the health and well-being of those who consume
+                them, while also enhancing the flavor of culinary preparations.
               </p>
               <p className={language === "EN" ? "text-display" : "text-hide"}>
-                Primario originates from the pursuit of natural food options
-                that enhance the body’s regenerative powers while also elevating
-                the flavor of culinary creations. <br /> <br />
                 For more information:{" "}
-                <a href="https://www.instagram.com/1primario/">
-                  @1primario
-                </a>{" "}
+                <a href="https://www.instagram.com/1primario/">@1primario</a>{" "}
                 <br /> <br /> In charge of product development, production,
                 supplier relationships, administrative tasks, sales, employees
                 training and team recruitment for the company.
               </p>
               <p className={language === "ES" ? "text-display" : "text-hide"}>
-                Negocio enfocado en la producción de caldo de huesos orgánico
+                Empresa enfocada en la producción de caldos de huesos orgánicos
                 para uso culinario y terapéutico. <br /> <br />
-                El proyecto se sustenta en los pilares de la sostenibilidad,
-                productos orgánicos de origen local, trazabilidad de los
-                insumos, y la creación de productos de la más alta calidad que
-                contribuyen a la salud de quienes los consumen.
+                Basada en los principios de sostenibilidad, trazabilidad de
+                insumos y el uso productos orgánicos para el apoyo de economías
+                locales, Primario ofrece productos de la más alta calidad que
+                contribuyen a la salud y el bienestar de quienes los consumen,
+                al mismo tiempo que eleva el sabor de las preparaciones
+                gastronómicas.
               </p>
               <p className={language === "ES" ? "text-display" : "text-hide"}>
-                Primario nace de la búsqueda de opciones alimentarias naturales
-                que potencien las capacidades regenerativas del cuerpo, al mismo
-                tiempo que elevan el sabor de las creaciones culinarias. <br />{" "}
-                <br />
                 Para más información: @1primario <br /> <br /> Encargado del
                 desarrollo de productos, producción, relaciones con proveedores,
-                tareas administrativas, ventas, capacitación de empleados y
-                reclutamiento de equipo para la empresa.
+                ventas, capacitación de empleados y reclutamiento de equipos
+                para la empresa.
               </p>
             </div>
             <div className="restaurant-location">
@@ -382,7 +362,7 @@ const Career = ({ language }) => {
                 Owned Business
               </p>
               <p className={language === "ES" ? "text-display" : "text-hide"}>
-                Negocio Propio
+                Emprendimiento
               </p>
               <div className="divider"></div>
               <p>Bogotá, Colombia</p>

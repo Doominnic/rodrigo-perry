@@ -897,7 +897,7 @@
   .restaurant-location {
     transform: none;
     position: inherit;
-    font-size: 12px;
+    font-size: 10px;
     margin-top: -30px;
   }
 
@@ -947,7 +947,7 @@
   }
 
   .restaurant-highlight {
-    background-color: var(--primary-color);
+    background-color: transparent;
   }
 
   .navbar-logos {
