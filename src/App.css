@@ -961,7 +961,7 @@
   .filter-container h1:first-of-type {
     margin-top: -100px;
     text-align: center;
-    font-size: 30px;
+    font-size: 26px;
   }
 
   .monasterio-logo {
@@ -974,5 +974,9 @@
 
   .celler-logo {
     width: 380px;
+  }
+
+  .swiper-slide .career-navbar-item h1 {
+    text-wrap: nowrap;
   }
 }
