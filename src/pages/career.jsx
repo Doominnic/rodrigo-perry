@@ -374,7 +374,7 @@ const Career = ({ language }) => {
       {/* Swiper Slider for Career Navbar */}
       {isMobile ? (
         <Swiper
-          spaceBetween={30}
+          spaceBetween={50}
           slidesPerView={3}
           centeredSlides={true}
           onSlideChange={swiper => {
