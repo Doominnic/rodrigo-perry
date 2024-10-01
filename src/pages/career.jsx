@@ -1,8 +1,25 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
+
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return isMobile;
+};
 
 const Career = ({ language }) => {
   const [restaurant, setRestaurant] = useState("primario");
+  const isMobile = useIsMobile();
 
   const toggleRestaurant = rest => {
     setRestaurant(rest);
@@ -373,60 +390,142 @@ const Career = ({ language }) => {
           </div>
         </div>
       </div>
-      <div className="career-navbar">
-        <div
-          className={`career-navbar-item  ${
-            restaurant === "primario" ? "restaurant-highlight" : ""
-          }`}
-          onClick={() => toggleRestaurant("primario")}
-        >
-          <img className="navbar-logos" src="logos/Logo2.png" />
-        </div>
-        <div
-          className={`career-navbar-item ${
-            restaurant === "luxury" ? "restaurant-highlight" : ""
-          }`}
-          onClick={() => toggleRestaurant("luxury")}
-        >
-          <h1>LUXURY YATCHS</h1>
-        </div>
-        <div
-          className={`career-navbar-item luxury-navbar ${
-            restaurant === "monasterio" ? "restaurant-highlight" : ""
-          }`}
-          onClick={() => toggleRestaurant("monasterio")}
-        >
-          <img className="navbar-logos" src="logos/Logo3.png" />
-        </div>
-        <div
-          className={`career-navbar-item ${
-            restaurant === "juana" ? "restaurant-highlight" : ""
-          }`}
-          onClick={() => toggleRestaurant("juana")}
-        >
-          <img className="navbar-logos" src="logos/logo4.png" />
-        </div>
-        <div
-          className={`career-navbar-item ${
-            restaurant === "celler" ? "restaurant-highlight" : ""
-          }`}
-          onClick={() => toggleRestaurant("celler")}
-        >
-          <img
-            className="navbar-logos celler-logo-navbar"
-            src="logos/logo1.png"
-          />
-        </div>
 
-        <div
-          className={`career-navbar-item ${
-            restaurant === "moo" ? "restaurant-highlight" : ""
-          }`}
-          onClick={() => toggleRestaurant("moo")}
+      {/* Swiper Slider for Career Navbar */}
+      {isMobile ? (
+        <Swiper
+          spaceBetween={30}
+          slidesPerView={3}
+          centeredSlides={true}
+          onSlideChange={swiper => {
+            const activeSlide = swiper.activeIndex;
+            const restaurantNames = [
+              "primario",
+              "luxury",
+              "monasterio",
+              "juana",
+              "celler",
+              "moo",
+            ];
+            toggleRestaurant(restaurantNames[activeSlide]);
+          }}
         >
-          <h1>MOO RESTAURANT</h1>
+          <SwiperSlide>
+            <div
+              className={`career-navbar-item ${
+                restaurant === "primario" ? "restaurant-highlight" : ""
+              }`}
+            >
+              <img className="navbar-logos" src="logos/Logo2.png" />
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div
+              className={`career-navbar-item ${
+                restaurant === "luxury" ? "restaurant-highlight" : ""
+              }`}
+            >
+              <h1>LUXURY YATCHS</h1>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div
+              className={`career-navbar-item ${
+                restaurant === "monasterio" ? "restaurant-highlight" : ""
+              }`}
+            >
+              <img className="navbar-logos" src="logos/Logo3.png" />
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div
+              className={`career-navbar-item ${
+                restaurant === "juana" ? "restaurant-highlight" : ""
+              }`}
+            >
+              <img className="navbar-logos" src="logos/logo4.png" />
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div
+              className={`career-navbar-item ${
+                restaurant === "celler" ? "restaurant-highlight" : ""
+              }`}
+            >
+              <img className="navbar-logos" src="logos/logo1.png" />
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div
+              className={`career-navbar-item ${
+                restaurant === "moo" ? "restaurant-highlight" : ""
+              }`}
+            >
+              <h1>MOO RESTAURANT</h1>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      ) : (
+        <div className="career-navbar">
+          <div
+            className={`career-navbar-item  ${
+              restaurant === "primario" ? "restaurant-highlight" : ""
+            }`}
+            onClick={() => toggleRestaurant("primario")}
+          >
+            <img className="navbar-logos" src="logos/Logo2.png" />
+          </div>
+          <div
+            className={`career-navbar-item ${
+              restaurant === "luxury" ? "restaurant-highlight" : ""
+            }`}
+            onClick={() => toggleRestaurant("luxury")}
+          >
+            <h1>LUXURY YATCHS</h1>
+          </div>
+          <div
+            className={`career-navbar-item luxury-navbar ${
+              restaurant === "monasterio" ? "restaurant-highlight" : ""
+            }`}
+            onClick={() => toggleRestaurant("monasterio")}
+          >
+            <img className="navbar-logos" src="logos/Logo3.png" />
+          </div>
+          <div
+            className={`career-navbar-item ${
+              restaurant === "juana" ? "restaurant-highlight" : ""
+            }`}
+            onClick={() => toggleRestaurant("juana")}
+          >
+            <img className="navbar-logos" src="logos/logo4.png" />
+          </div>
+          <div
+            className={`career-navbar-item ${
+              restaurant === "celler" ? "restaurant-highlight" : ""
+            }`}
+            onClick={() => toggleRestaurant("celler")}
+          >
+            <img
+              className="navbar-logos celler-logo-navbar"
+              src="logos/logo1.png"
+            />
+          </div>
+
+          <div
+            className={`career-navbar-item ${
+              restaurant === "moo" ? "restaurant-highlight" : ""
+            }`}
+            onClick={() => toggleRestaurant("moo")}
+          >
+            <h1>MOO RESTAURANT</h1>
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 };
