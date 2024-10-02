@@ -775,6 +775,10 @@
     color: #3b3f3a;
   }
 
+  .mobile-item:active {
+    color: var(--accent-color);
+  }
+
   .hide-mobile-menu {
     display: none;
   }
