@@ -910,7 +910,7 @@
     left: 50%; /* Move the left edge to the center of the screen */
     transform: translateX(-50%);
     font-size: 10px;
-    bottom: 150px;
+    bottom: 250px;
     text-wrap: nowrap;
     width: 100%;
   }
