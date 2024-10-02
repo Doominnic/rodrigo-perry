@@ -345,10 +345,11 @@ const Career = ({ language }) => {
                 gastronómicas.
               </p>
               <p className={language === "ES" ? "text-display" : "text-hide"}>
-                Para más información: @1primario <br /> <br /> Encargado del
-                desarrollo de productos, producción, relaciones con proveedores,
-                ventas, capacitación de empleados y reclutamiento de equipos
-                para la empresa.
+                Para más información:{" "}
+                <a href="https://www.instagram.com/1primario/">@1primario</a>{" "}
+                <br /> <br /> Encargado del desarrollo de productos, producción,
+                relaciones con proveedores, ventas, capacitación de empleados y
+                reclutamiento de equipos para la empresa.
               </p>
             </div>
             <div className="restaurant-location">
