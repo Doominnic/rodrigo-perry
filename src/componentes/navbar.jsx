@@ -26,6 +26,12 @@ function Navbar({ language, setLanguage }) {
     setMenuOpen(!menuOpen);
   };
 
+  {
+    menuOpen
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "");
+  }
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
