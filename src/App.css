@@ -771,15 +771,12 @@
     gap: 30px;
   }
 
-  .mobile-item {
-    -webkit-tap-highlight-color: var(--accent-color);
-  }
-
   .mobile-item.active {
     color: #3b3f3a;
   }
 
-  .mobile-item:active {
+  .mobile-item:link,
+  .mobile-item:visited {
     color: var(--accent-color);
   }
 
