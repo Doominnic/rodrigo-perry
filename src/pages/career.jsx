@@ -40,11 +40,11 @@ const Career = ({ language }) => {
               <p className={language === "EN" ? "text-display" : "text-hide"}>
                 Founded in 1986, this prestigious three Michelin Star restaurant
                 is helmed by the renowned Roca brothers: Joan, the head chef;
-                Josep, the sommelier; and Jordi, the pastry chef. Specializing
-                in traditional Catalan cuisine, the restaurant earned global
-                acclaim by being named the best in the world in the “The World’s
-                50 Best Restaurants” list by Restaurant magazine in both 2013
-                and 2015.
+                Josep, the sommelier; and Jordi, the pastry chef.
+                <br /> <br /> Specializing in traditional Catalan cuisine, the
+                restaurant earned global acclaim by being named the best in the
+                world in the “The World’s 50 Best Restaurants” list by
+                Restaurant magazine in both 2013 and 2015.
               </p>
               <p className={language === "EN" ? "text-display" : "text-hide"}>
                 In charge of the service and menu preparation, mise en place,
@@ -55,6 +55,7 @@ const Career = ({ language }) => {
                 Fundado en 1986, este prestigioso restaurante con tres estrellas
                 Michelin es dirigido por los reconocidos hermanos Roca: Joan,
                 chef principal; Josep, sumiller; y Jordi, chef de pastelería.
+                <br /> <br />
                 Especializado en cocina tradicional catalana, el restaurante ha
                 ganado reconocimiento mundial al ser nombrado el mejor del mundo
                 en la lista {`"`}The World’s 50 Best Restaurants{`"`} de la
