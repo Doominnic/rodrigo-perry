@@ -771,6 +771,10 @@
     gap: 30px;
   }
 
+  .mobile-item {
+    -webkit-tap-highlight-color: var(--accent-color);
+  }
+
   .mobile-item.active {
     color: #3b3f3a;
   }
