@@ -579,7 +579,7 @@
   margin-bottom: 100px;
   margin-top: 80px;
   top: 240px;
-  position: fixed; /* Fix the navbar position relative to the viewport */
+  position: absolute; /* Fix the navbar position relative to the viewport */
   /* 100px above the bottom of the screen */
   left: 50%; /* Move the left edge to the center of the screen */
   transform: translateX(-50%);
@@ -905,13 +905,14 @@
   }
 
   .restaurant-location {
-    position: fixed; /* Fix the navbar position relative to the viewport */
+    position: absolute; /* Fix the navbar position relative to the viewport */
     /* 100px above the bottom of the screen */
     left: 50%; /* Move the left edge to the center of the screen */
     transform: translateX(-50%);
     font-size: 10px;
     bottom: 150px;
     text-wrap: nowrap;
+    width: 100%;
   }
 
   .primario-logo {
