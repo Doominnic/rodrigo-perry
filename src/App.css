@@ -905,10 +905,13 @@
   }
 
   .restaurant-location {
-    transform: none;
-    position: inherit;
+    position: fixed; /* Fix the navbar position relative to the viewport */
+    /* 100px above the bottom of the screen */
+    left: 50%; /* Move the left edge to the center of the screen */
+    transform: translateX(-50%);
     font-size: 10px;
-    margin-top: -30px;
+    bottom: 100px;
+    text-wrap: nowrap;
   }
 
   .primario-logo {
@@ -969,12 +972,7 @@
     height: auto;
   }
 
-  .filter-container img:first-of-type {
-    margin-top: -130px;
-  }
-
   .filter-container h1:first-of-type {
-    margin-top: -150px;
     text-align: center;
     font-size: 26px;
   }
