@@ -76,7 +76,7 @@ function Navbar({ language, setLanguage }) {
         </div>
         <div
           className={`hide-mobile ${
-            menuOpen ? "mobile-menu" : "hide-mobile-menu"
+            menuOpen ? "mobile-menu open" : "hide-mobile-menu"
           }`}
           onClick={handleMenuOpen}
         >

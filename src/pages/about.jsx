@@ -1,6 +1,17 @@
 import PropTypes from "prop-types";
 
 const About = ({ language }) => {
+  const handleScroll = e => {
+    e.preventDefault();
+    const target = document.querySelector(e.currentTarget.getAttribute("href"));
+    const offsetPosition = target.offsetTop - 80; // 60px ahead
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="about-page">
       <div className="section-1">
@@ -27,10 +38,12 @@ const About = ({ language }) => {
       </div>
       <div className="read-more">
         <p>Read More</p>
-        <img src="icons/flechita.png" />
+        <a href="#section-1" onClick={handleScroll}>
+          <img src="icons/flechita.png" />
+        </a>
       </div>
       <div className="section-2">
-        <div className="sub-section-1">
+        <div className="sub-section-1" id="section-1">
           <p
             className={
               language === "EN" ? "text-display-section-2" : "text-hide"
