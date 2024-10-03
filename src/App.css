@@ -835,7 +835,6 @@
     display: none;
   }
 */
-
   .mobile-item {
     letter-spacing: 1px;
     color: var(--quaternary-color);
@@ -866,8 +865,7 @@
     font-size: 12px;
     letter-spacing: 0.2px;
     line-height: 14px;
-    margin-left: -20px;
-    margin-bottom: -70px;
+    margin-left: -40px;
   }
 
   .section-2 {
