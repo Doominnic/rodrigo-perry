@@ -170,6 +170,7 @@
 
 /* Language toggle styles remain the same */
 .language-toggle {
+  position: relative; /* To position the sliding background */
   display: flex;
   gap: 10px;
   align-items: center;
@@ -191,22 +192,46 @@
   border: none;
   cursor: pointer;
   font-size: 10px;
+  z-index: 2; /* Ensure buttons are above the sliding background */
+  position: relative;
+  border-radius: 50px;
+  transition: color 0.4s ease 0.2s;
 }
 
 .language-toggle .active-language {
-  padding: 5px 15px;
-  background-color: var(--quaternary-color);
+  padding: 5px 16px;
   color: var(--primary-color);
-  border-radius: 50px;
   font-weight: bold;
+  background-color: transparent;
 }
 
 .off {
   padding: 5px 5px;
   background-color: transparent;
   color: var(--quaternary-color);
-  border-radius: 50px;
   font-weight: bold;
+  transition: color 0.4s ease 0.2s;
+}
+
+/* Background slider */
+.bg-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background-color: var(--quaternary-color);
+  border-radius: 50px;
+  transition: all 0.4s ease;
+  z-index: 1; /* Below the buttons */
+}
+
+.slide-en {
+  left: 0; /* Move background to cover the EN button */
+}
+
+.slide-es {
+  left: 50%; /* Move background to cover the ES button */
 }
 
 .hamburguer-icon,

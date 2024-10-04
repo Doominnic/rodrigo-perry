@@ -162,6 +162,10 @@ function Navbar({ language, setLanguage }) {
           <span>E</span>
           <span>S</span>
         </button>
+        {/* The background sliding effect container */}
+        <div
+          className={`bg-slide ${language === "EN" ? "slide-en" : "slide-es"}`}
+        ></div>
       </div>
     </div>
   );
