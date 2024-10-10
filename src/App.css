@@ -777,11 +777,13 @@
 .service-section.expanded {
   width: 100vw; /* Expand to full width */
   justify-content: left;
+  padding-bottom: 40px;
 }
 
 .service-section.expanded h2 {
   font-size: 90px;
   line-height: 90px;
+  text-wrap: nowrap;
 }
 
 .service-section.contracted {

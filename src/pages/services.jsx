@@ -61,9 +61,7 @@ function Services() {
         <>
           Luxury Yachts <br /> and Villas
         </>,
-        <>
-          Cooking <br /> Classes
-        </>,
+        "Cooking Classes",
       ].map((title, index) => (
         <div
           key={index}
