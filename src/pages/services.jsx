@@ -86,11 +86,13 @@ function Services() {
               <ion-icon name="chevron-forward-circle"></ion-icon>
             )}
           </div>
-          {expandedSection === index && (
-            <div className="service-content">
-              <p>{serviceTexts[index]}</p>
-            </div>
-          )}
+          <div
+            className={`service-content ${
+              expandedSection === index ? "reveal-text" : "hide-text"
+            }`}
+          >
+            <p>{serviceTexts[index]}</p>
+          </div>
         </div>
       ))}
     </div>

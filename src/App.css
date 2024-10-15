@@ -747,7 +747,7 @@
 .service-section h2 {
   color: var(--quaternary-color); /* Adjust text color as needed */
   font-weight: 500;
-  transition: font-size 0.8s ease, line-height 0.01s ease;
+  transition: font-size 0.8s ease;
 }
 
 /* Background filter */
@@ -777,12 +777,12 @@
 .service-section.expanded {
   width: 100vw; /* Expand to full width */
   justify-content: left;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 .service-section.expanded h2 {
   font-size: 90px;
-  line-height: 90px;
+
   text-wrap: nowrap;
 }
 
@@ -793,6 +793,29 @@
 
 .service-section.initial {
   width: 20vw; /* The default state with all sections at 20vw */
+}
+
+.service-content {
+  opacity: 0;
+  transform: translateX(0%); /* Initially, text is pushed down off the screen */
+  transition: opacity 0.6s ease, transform 0.6s ease; /* Transition opacity and movement */
+  color: white; /* Adjust text color */
+  max-width: 80%; /* Ensure the text stays within a fixed width */
+  height: 200px; /* Fixed height */
+  overflow: hidden;
+}
+
+/* When the section is expanded, reveal the text */
+.reveal-text {
+  opacity: 1;
+  transform: translateX(0); /* Bring the text back into view */
+}
+
+.hide-text {
+  opacity: 0;
+  transform: translateX(
+    100%
+  ); /* Hide the text again when section is collapsed */
 }
 
 ion-icon {
@@ -809,6 +832,9 @@ ion-icon {
   width: 40%; /* Adjust width as per design */
   margin-left: auto;
   text-align: justify;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 
 /*-----------------------------------------------------------*/
