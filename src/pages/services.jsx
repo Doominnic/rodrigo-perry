@@ -40,7 +40,7 @@ function Services() {
       memorable dining experiences, and designing custom event menus that
       reflect your vision, we will work towards making your culinary endeavors
       remain both innovative and successful.
-    </>, // Full text from your request for Consulting
+    </>,
     `When it comes to hosting private events,  I offer a variety of services to guarantee everything runs seamlessly. From designing personalized menus that cater to your event’s theme and your guests’ preferences to managing culinary aspects such as timing, presentation, and service, I am dedicated to making your event a success. I will select high-quality ingredients to elevate the flavors of your dishes, manage staff for smooth operations, and design visually impressive food displays. After the event, I will review the outcome and collect feedback to refine and improve future events.
 `,
     `As your personal chef, I am dedicated to providing a customized and exceptional dining experience. I will develop menus tailored specifically to your tastes and dietary needs, prepare gourmet meals using the finest ingredients, and design bespoke dining experiences for your private gatherings. By overseeing all aspects of kitchen operations, including cooking, cleaning, and equipment maintenance, to providing exceptional service and presentation, my aim is to elevate your dining experience. Adaptability is crucial, and I will adjust to your changing schedules and preferences to offer a seamless culinary experience.`,
@@ -79,7 +79,7 @@ function Services() {
           }}
         >
           <h2>{title}</h2>
-          <div onClick={() => toggleExpand(index)}>
+          <div className="icon-container" onClick={() => toggleExpand(index)}>
             {expandedSection === index ? (
               <ion-icon name="chevron-down-circle"></ion-icon>
             ) : (

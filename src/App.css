@@ -384,14 +384,14 @@
 .text-display-about {
   display: block;
   width: 400px;
-  font-size: 18px;
+  font-size: 14px;
   letter-spacing: 0.6px;
   grid-column: 2;
   grid-row: 2;
   margin-left: 30%;
   align-content: center;
   margin-top: -70px;
-  line-height: 22px;
+  line-height: 20px;
 }
 
 .text-display {
@@ -454,7 +454,7 @@
 
 .text-display-section-2 {
   width: 350px;
-  font-size: 18px;
+  font-size: 14px;
   letter-spacing: 0.2px;
   color: var(--secondary-color);
   line-height: 22px;
@@ -481,7 +481,7 @@
 
 .text-display-section-3 {
   width: 400px;
-  font-size: 18px;
+  font-size: 14px;
   letter-spacing: 0.2px;
   color: var(--secondary-color);
   line-height: 22px;
@@ -786,6 +786,10 @@
   text-wrap: nowrap;
 }
 
+.service-section.expanded .icon-container {
+  margin-bottom: 20px;
+}
+
 .service-section.contracted {
   width: 0; /* Contract to 0 width */
   padding: 0;
@@ -801,7 +805,7 @@
   transition: opacity 0.6s ease, transform 0.6s ease; /* Transition opacity and movement */
   color: white; /* Adjust text color */
   max-width: 80%; /* Ensure the text stays within a fixed width */
-  height: 200px; /* Fixed height */
+
   overflow: hidden;
 }
 
@@ -809,6 +813,8 @@
 .reveal-text {
   opacity: 1;
   transform: translateX(0); /* Bring the text back into view */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition-delay: 0.3s; /* Apply the 1-second delay to both properties */
 }
 
 .hide-text {
@@ -826,6 +832,7 @@ ion-icon {
 
 .service-content {
   margin-top: 20px;
+  margin-bottom: 35px;
   color: var(--quaternary-color); /* Adjust color as needed */
   font-size: 16px;
   line-height: 20px;
