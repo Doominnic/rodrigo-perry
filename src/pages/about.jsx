@@ -37,7 +37,12 @@ const About = ({ language }) => {
         </p>
       </div>
       <div className="read-more">
-        <p>Read More</p>
+        <p className={language === "EN" ? "text-display" : "text-hide"}>
+          Read More
+        </p>
+        <p className={language === "ES" ? "text-display" : "text-hide"}>
+          Leer Mas
+        </p>
         <a href="#section-1" onClick={handleScroll}>
           <img src="icons/flechita.png" />
         </a>
