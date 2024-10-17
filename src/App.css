@@ -742,6 +742,7 @@
   padding: 15px 30px;
   justify-content: space-between;
   align-items: end;
+  filter: grayscale(100%);
 }
 
 .service-section h2 {
@@ -778,6 +779,7 @@
   width: 100vw; /* Expand to full width */
   justify-content: left;
   padding-bottom: 20px;
+  filter: grayscale(0%);
 }
 
 .service-section.expanded h2 {
@@ -822,6 +824,7 @@
   transform: translateX(
     100%
   ); /* Hide the text again when section is collapsed */
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 ion-icon {

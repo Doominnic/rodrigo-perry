@@ -41,7 +41,7 @@ const About = ({ language }) => {
           Read More
         </p>
         <p className={language === "ES" ? "text-display" : "text-hide"}>
-          Leer Mas
+          Leer Más
         </p>
         <a href="#section-1" onClick={handleScroll}>
           <img src="icons/flechita.png" />

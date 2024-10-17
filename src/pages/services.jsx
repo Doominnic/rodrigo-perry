@@ -13,11 +13,11 @@ const Services = ({ language }) => {
   };
 
   const backgroundImages = [
-    "url('/public/chef-fotos/3.jpg')", // Replace with actual image URLs
-    "url('/public/plates/plate-1.jpg')",
-    "url('/public/chef-fotos/5.jpg')",
-    "url('/public/restaurants/Luxury.jpg')",
-    "url('/public/chef-fotos/6.jpg')",
+    "url('/public/services/1.jpg')", // Replace with actual image URLs
+    "url('/public/services/2.jpg')",
+    "url('/public/services/7.jpg')",
+    "url('/public/services/4.jpg')",
+    "url('/public/services/5.jpg')",
   ];
 
   const titlesEnglish = [
