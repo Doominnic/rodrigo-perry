@@ -824,7 +824,7 @@
   transform: translateX(
     100%
   ); /* Hide the text again when section is collapsed */
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0s ease, transform 0s ease;
 }
 
 ion-icon {
