@@ -931,6 +931,16 @@ ion-icon {
   z-index: 2;
 }
 
+.view-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  color: var(--quaternary-color);
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
 /*-----------------------------------------------------------*/
 /*------------------- RESPONSIVE STYLES -----------------------*/
 

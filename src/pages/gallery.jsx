@@ -85,7 +85,7 @@ const Gallery = ({ language }) => {
           <h1>PERRY</h1>
         </div>
 
-        <div className="read-more">
+        <div className="view-gallery">
           <p className={language === "EN" ? "text-display" : "text-hide"}>
             Gallery
           </p>
