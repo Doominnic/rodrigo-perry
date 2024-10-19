@@ -75,7 +75,7 @@ const Gallery = ({ language }) => {
     "image-60.jpeg",
   ];
 
-  const images = imageFilenames.map(filename => `/public/gallery/${filename}`);
+  const images = imageFilenames.map(filename => `/gallery/${filename}`);
 
   return (
     <div className="gallery-page">
