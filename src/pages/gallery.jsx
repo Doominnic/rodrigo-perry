@@ -1,4 +1,11 @@
 import PropTypes from "prop-types";
+import { motion } from "framer-motion";
+
+const pageVariants = {
+  initial: { opacity: 0, x: 0 },
+  animate: { opacity: 1, x: 0 },
+  exit: { opacity: 0, x: 0 },
+};
 
 const Gallery = ({ language }) => {
   const handleScroll = e => {
@@ -78,33 +85,41 @@ const Gallery = ({ language }) => {
   const images = imageFilenames.map(filename => `/gallery/${filename}`);
 
   return (
-    <div className="gallery-page">
-      <div className="gallery-section-1">
-        <div className="gallery-title">
-          <h1>RODRIGO</h1>
-          <h1>PERRY</h1>
-        </div>
-
-        <div className="view-gallery">
-          <p className={language === "EN" ? "text-display" : "text-hide"}>
-            Gallery
-          </p>
-          <p className={language === "ES" ? "text-display" : "text-hide"}>
-            Galería
-          </p>
-          <a href="#gallery-section" onClick={handleScroll}>
-            <img src="icons/flechita.png" />
-          </a>
-        </div>
-      </div>
-      <div className="mosaic-gallery" id="gallery-section">
-        {images.map((src, index) => (
-          <div className="image-container" key={index}>
-            <img src={src} alt={`Gallery ${index + 1}`} loading="lazy" />
+    <motion.div
+      variants={pageVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      transition={{ duration: 1.2 }}
+    >
+      <div className="gallery-page">
+        <div className="gallery-section-1">
+          <div className="gallery-title">
+            <h1>RODRIGO</h1>
+            <h1>PERRY</h1>
           </div>
-        ))}
+
+          <div className="view-gallery">
+            <p className={language === "EN" ? "text-display" : "text-hide"}>
+              Gallery
+            </p>
+            <p className={language === "ES" ? "text-display" : "text-hide"}>
+              Galería
+            </p>
+            <a href="#gallery-section" onClick={handleScroll}>
+              <img src="icons/flechita.png" />
+            </a>
+          </div>
+        </div>
+        <div className="mosaic-gallery" id="gallery-section">
+          {images.map((src, index) => (
+            <div className="image-container" key={index}>
+              <img src={src} alt={`Gallery ${index + 1}`} loading="lazy" />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
