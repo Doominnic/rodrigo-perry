@@ -1328,4 +1328,18 @@ ion-icon {
     width: 80%;
     height: fit-content;
   }
+
+  .gallery-title {
+    flex-direction: column;
+    gap: 150px;
+    padding-top: 35vh;
+  }
+
+  .gallery-title h1 {
+    font-size: 35px;
+  }
+
+  .mosaic-gallery {
+    column-count: 2;
+  }
 }
