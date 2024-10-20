@@ -1296,4 +1296,36 @@ ion-icon {
   .celler-slider {
     width: 120px;
   }
+
+  .services-container {
+    flex-direction: column;
+  }
+
+  .service-section {
+    width: 100vw !important;
+  }
+
+  .service-section.expanded h2 {
+    text-wrap: balance;
+    font-size: 75px;
+  }
+
+  .service-section.initial {
+    height: 20vh;
+  }
+
+  .service-section.expanded {
+    height: 100vh;
+  }
+
+  .service-section.contracted {
+    height: 0;
+  }
+
+  .service-content {
+    top: 120px;
+    right: 40px;
+    width: 80%;
+    height: fit-content;
+  }
 }
