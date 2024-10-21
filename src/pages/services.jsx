@@ -123,12 +123,11 @@ const Services = ({ language }) => {
               ? "initial"
               : "contracted"
           }`}
-          style={{
-            backgroundImage: backgroundImages[index],
-            backgroundSize: "cover", // Ensure background covers the entire section
-            backgroundPosition: "center", // Center the background image
-          }}
         >
+          <div
+            className="background-image"
+            style={{ backgroundImage: backgroundImages[index] }}
+          ></div>
           <h2>{title}</h2>
           <div className="icon-container" onClick={() => toggleExpand(index)}>
             {expandedSection === index ? (

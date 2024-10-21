@@ -52,8 +52,8 @@ const Gallery = ({ language }) => {
     "image-29.jpeg",
     "image-30.JPG",
     "image-31.jpeg",
+    "image-32.jpeg",
     "image-33.jpeg",
-    "image-61.jpeg",
     "image-35.jpeg",
     "image-37.jpeg",
     "image-38.jpeg",
@@ -79,6 +79,7 @@ const Gallery = ({ language }) => {
     "image-58.jpeg",
     "image-59.jpeg",
     "image-60.jpeg",
+    "image-61.jpeg",
   ];
 
   const images = imageFilenames.map(filename => `/gallery/${filename}`);
