@@ -53,9 +53,8 @@ const Gallery = ({ language }) => {
     "image-30.JPG",
     "image-31.jpeg",
     "image-33.jpeg",
-    "image-34.jpeg",
+    "image-61.jpeg",
     "image-35.jpeg",
-
     "image-37.jpeg",
     "image-38.jpeg",
     "image-39.jpeg",

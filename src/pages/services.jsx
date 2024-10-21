@@ -1,12 +1,5 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import { motion } from "framer-motion";
-
-const pageVariants = {
-  initial: { opacity: 0, x: 0 },
-  animate: { opacity: 1, x: 0 },
-  exit: { opacity: 0, x: 0 },
-};
 
 const Services = ({ language }) => {
   const [expandedSection, setExpandedSection] = useState(null); // No section is expanded initially
@@ -119,53 +112,45 @@ const Services = ({ language }) => {
   const titles = language === "EN" ? titlesEnglish : titlesSpanish;
 
   return (
-    <motion.div
-      variants={pageVariants}
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      transition={{ duration: 1.2 }}
-    >
-      <div className="services-container">
-        {titles.map((title, index) => (
-          <div
-            key={index}
-            className={`service-section ${
-              expandedSection === index
-                ? "expanded"
-                : expandedSection === null
-                ? "initial"
-                : "contracted"
-            }`}
-            style={{
-              backgroundImage: backgroundImages[index],
-              backgroundSize: "cover", // Ensure background covers the entire section
-              backgroundPosition: "center", // Center the background image
-            }}
-          >
-            <h2>{title}</h2>
-            <div className="icon-container" onClick={() => toggleExpand(index)}>
-              {expandedSection === index ? (
-                <ion-icon name="chevron-down-circle"></ion-icon>
-              ) : (
-                <ion-icon name="chevron-forward-circle"></ion-icon>
-              )}
-            </div>
-            <div
-              className={`service-content ${
-                expandedSection === index ? "reveal-text" : "hide-text"
-              }`}
-            >
-              {language === "EN" ? (
-                <p>{serviceTexts[index]}</p>
-              ) : (
-                <p>{serviceTextsSpanish[index]}</p>
-              )}
-            </div>
+    <div className="services-container">
+      {titles.map((title, index) => (
+        <div
+          key={index}
+          className={`service-section ${
+            expandedSection === index
+              ? "expanded"
+              : expandedSection === null
+              ? "initial"
+              : "contracted"
+          }`}
+          style={{
+            backgroundImage: backgroundImages[index],
+            backgroundSize: "cover", // Ensure background covers the entire section
+            backgroundPosition: "center", // Center the background image
+          }}
+        >
+          <h2>{title}</h2>
+          <div className="icon-container" onClick={() => toggleExpand(index)}>
+            {expandedSection === index ? (
+              <ion-icon name="chevron-down-circle"></ion-icon>
+            ) : (
+              <ion-icon name="chevron-forward-circle"></ion-icon>
+            )}
           </div>
-        ))}
-      </div>
-    </motion.div>
+          <div
+            className={`service-content ${
+              expandedSection === index ? "reveal-text" : "hide-text"
+            }`}
+          >
+            {language === "EN" ? (
+              <p>{serviceTexts[index]}</p>
+            ) : (
+              <p>{serviceTextsSpanish[index]}</p>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
   );
 };
 
