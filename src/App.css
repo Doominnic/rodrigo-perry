@@ -1051,6 +1051,14 @@ ion-icon {
   .menu-item.active {
     padding: 0px 10px;
   }
+
+  .service-section.expanded {
+    padding-bottom: 35px;
+  }
+
+  .service-section.expanded h2 {
+    font-size: clamp(60px, 1vw, 90px);
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 435px) {
