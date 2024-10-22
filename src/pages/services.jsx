@@ -123,19 +123,16 @@ const Services = ({ language }) => {
               ? "initial"
               : "contracted"
           }`}
+          onClick={() => toggleExpand(index)}
         >
           <div
             className="background-image"
-            style={{ backgroundImage: backgroundImages[index] }}
+            style={{
+              backgroundImage: backgroundImages[index],
+            }}
           ></div>
           <h2>{title}</h2>
-          <div className="icon-container" onClick={() => toggleExpand(index)}>
-            {expandedSection === index ? (
-              <ion-icon name="chevron-down-circle"></ion-icon>
-            ) : (
-              <ion-icon name="chevron-forward-circle"></ion-icon>
-            )}
-          </div>
+
           <div
             className={`service-content ${
               expandedSection === index ? "reveal-text" : "hide-text"
