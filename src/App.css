@@ -962,6 +962,38 @@ ion-icon {
   letter-spacing: 1px;
 }
 
+/* Modal Styles */
+.modal {
+  position: absolute; /* Changed to absolute for dynamic positioning */
+  left: 50%;
+  transform: translate(-50%, 0); /* Center horizontally */
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-image {
+  max-width: 75%;
+  max-height: 75%;
+  object-fit: contain;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /*-----------------------------------------------------------*/
 /*------------------- RESPONSIVE STYLES -----------------------*/
 

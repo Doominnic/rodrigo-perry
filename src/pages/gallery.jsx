@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const pageVariants = {
   initial: { opacity: 0, x: 0 },
@@ -8,15 +9,31 @@ const pageVariants = {
 };
 
 const Gallery = ({ language }) => {
-  const handleScroll = e => {
-    e.preventDefault();
-    const target = document.querySelector(e.currentTarget.getAttribute("href"));
-    const offsetPosition = target.offsetTop - 60; // 60px ahead
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: "smooth",
-    });
+  // Track scroll position dynamically
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const openModal = src => {
+    setSelectedImage(src);
+    setIsModalOpen(true);
+    document.body.style.overflow = "hidden"; // Disable background scroll
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedImage(null);
+    document.body.style.overflow = ""; // Restore background scroll
   };
 
   // Array of image URLs
@@ -98,7 +115,6 @@ const Gallery = ({ language }) => {
             <h1>RODRIGO</h1>
             <h1>PERRY</h1>
           </div>
-
           <div className="view-gallery">
             <p className={language === "EN" ? "text-display" : "text-hide"}>
               Gallery
@@ -106,18 +122,33 @@ const Gallery = ({ language }) => {
             <p className={language === "ES" ? "text-display" : "text-hide"}>
               Galería
             </p>
-            <a href="#gallery-section" onClick={handleScroll}>
-              <img src="icons/flechita.png" />
+            <a href="#gallery-section">
+              <img src="icons/flechita.png" alt="Scroll Down" />
             </a>
           </div>
         </div>
+
         <div className="mosaic-gallery" id="gallery-section">
           {images.map((src, index) => (
-            <div className="image-container" key={index}>
+            <div
+              className="image-container"
+              key={index}
+              onClick={() => openModal(src)}
+            >
               <img src={src} alt={`Gallery ${index + 1}`} loading="lazy" />
             </div>
           ))}
         </div>
+
+        {isModalOpen && (
+          <div
+            className="modal"
+            style={{ top: scrollPosition }}
+            onClick={closeModal}
+          >
+            <img src={selectedImage} alt="Selected" className="modal-image" />
+          </div>
+        )}
       </div>
     </motion.div>
   );
