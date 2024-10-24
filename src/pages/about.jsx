@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const pageVariants = {
   initial: { opacity: 0, x: 0 },
@@ -7,7 +8,41 @@ const pageVariants = {
   exit: { opacity: 0, x: 0 },
 };
 
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+};
+
 const About = ({ language }) => {
+  const controlsSection2 = useAnimation();
+  const controlsSection3 = useAnimation();
+  const section2Ref = useRef(null);
+  const section3Ref = useRef(null);
+
+  // Intersection Observer to trigger animations
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          if (entry.target === section2Ref.current) {
+            controlsSection2.start("visible");
+          } else if (entry.target === section3Ref.current) {
+            controlsSection3.start("visible");
+          }
+        }
+      },
+      { threshold: 0.5 } // Adjust threshold as needed
+    );
+
+    if (section2Ref.current) observer.observe(section2Ref.current);
+    if (section3Ref.current) observer.observe(section3Ref.current);
+
+    return () => {
+      if (section2Ref.current) observer.unobserve(section2Ref.current);
+      if (section3Ref.current) observer.unobserve(section3Ref.current);
+    };
+  }, [controlsSection2, controlsSection3]);
+
   const handleScroll = e => {
     e.preventDefault();
     const target = document.querySelector(e.currentTarget.getAttribute("href"));
@@ -62,7 +97,14 @@ const About = ({ language }) => {
             <img src="icons/flechita.png" />
           </a>
         </div>
-        <div className="section-2">
+        <motion.div
+          className="section-2"
+          id="section-1"
+          ref={section2Ref}
+          variants={fadeIn}
+          initial="hidden"
+          animate={controlsSection2}
+        >
           <div className="sub-section-1" id="section-1">
             <p
               className={
@@ -91,8 +133,14 @@ const About = ({ language }) => {
             <div className="chef-image-about"></div>
           </div>
           <div className="plate-1"></div>
-        </div>
-        <div className="section-3">
+        </motion.div>
+        <motion.div
+          className="section-3"
+          ref={section3Ref}
+          variants={fadeIn}
+          initial="hidden"
+          animate={controlsSection3}
+        >
           <div className="plate-2-container">
             <div className="plate-2"></div>
           </div>
@@ -149,7 +197,7 @@ const About = ({ language }) => {
               experiencias excepcionales.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </motion.div>
   );
