@@ -879,11 +879,13 @@ ion-icon {
   background-repeat: no-repeat;
   background-attachment: fixed; /* Makes the background fixed during scrolling */
   margin: 0;
-  padding: 0;
+
   overflow-x: hidden; /* Prevents horizontal scrolling */
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
   color: var(--quaternary-color);
   padding: 0 16vw;
 }
@@ -1433,7 +1435,8 @@ footer h2 {
   }
 
   .gallery-title h1 {
-    font-size: 35px;
+    font-size: 20px;
+    letter-spacing: 25px;
   }
 
   .mosaic-gallery {
