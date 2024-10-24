@@ -140,6 +140,24 @@ const Gallery = ({ language }) => {
           ))}
         </div>
 
+        <footer>
+          <h2>Let’s cook</h2>
+          <div className="footer-links">
+            <a
+              href="https://www.instagram.com/perryrodrigo/"
+              className="contact-info"
+            >
+              <div className="ig-icon icon"></div>perryrodrigo
+            </a>
+            <a href="mailto:perryrodrigo@gmail.com" className="contact-info">
+              <div className="email-icon icon"></div>perryrodrigo@gmail.com
+            </a>
+            <a href="tel:+573134052801" className="contact-info">
+              <div className="tel-icon icon"></div>+57 3134052801
+            </a>
+          </div>
+        </footer>
+
         {isModalOpen && (
           <div
             className="modal"

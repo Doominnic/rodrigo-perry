@@ -503,6 +503,7 @@
   color: var(--quaternary-color);
   font-weight: 500;
   letter-spacing: 1px;
+  font-size: 14px;
 }
 
 /*--------------CAREER PAGE STYLES-----------------*/
@@ -576,6 +577,7 @@
   font-weight: 500;
   letter-spacing: 10px;
   margin-bottom: -10px;
+  margin-top: 80px;
 }
 
 .filter-container h2 {
@@ -634,8 +636,8 @@
   display: flex;
   gap: 80px;
   margin-bottom: 100px;
-  margin-top: 80px;
-  top: 240px;
+  margin-top: 40px;
+  top: 300px;
   position: absolute; /* Fix the navbar position relative to the viewport */
   /* 100px above the bottom of the screen */
   left: 50%; /* Move the left edge to the center of the screen */
@@ -659,8 +661,9 @@
 }
 
 .celler-logo {
-  width: 800px;
+  width: 600px;
   height: fit-content;
+  margin-top: 60px;
 }
 
 .primario-logo {
@@ -682,6 +685,7 @@
 .juana-logo {
   width: 300px;
   height: fit-content;
+  margin-top: 20px;
 }
 
 .restaurant-location {
@@ -961,6 +965,7 @@ ion-icon {
   color: var(--quaternary-color);
   font-weight: 500;
   letter-spacing: 1px;
+  font-size: 14px;
 }
 
 /* Modal Styles */
@@ -993,6 +998,33 @@ ion-icon {
   to {
     opacity: 1;
   }
+}
+
+footer {
+  background-color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 150px;
+  padding: 10px 120px;
+}
+
+footer h2 {
+  color: var(--quaternary-color);
+  font-weight: 300;
+  font-size: 40px;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.footer-links a {
+  font-size: 12px;
+  font-weight: 300;
 }
 
 /*-----------------------------------------------------------*/
@@ -1391,6 +1423,10 @@ ion-icon {
     height: fit-content;
   }
 
+  .gallery-section-1 {
+    background-image: url("/public/plates/GalleryResponsive.jpg"); /* Replace with your image path */
+  }
+
   .gallery-title {
     flex-direction: column;
     gap: 150px;
@@ -1403,5 +1439,19 @@ ion-icon {
 
   .mosaic-gallery {
     column-count: 2;
+  }
+
+  footer {
+    padding: 10px 30px;
+  }
+
+  footer h2 {
+    font-size: 30px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: baseline;
   }
 }
