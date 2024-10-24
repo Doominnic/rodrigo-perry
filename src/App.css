@@ -1425,7 +1425,7 @@ footer h2 {
 
   .gallery-section-1 {
     background-image: url("/public/plates/GalleryResponsive.jpg"); /* Replace with your image path */
-    background-size: contain;
+    background-size: auto;
   }
 
   .gallery-title {
