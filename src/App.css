@@ -1425,12 +1425,14 @@ footer h2 {
 
   .gallery-section-1 {
     background-image: url("/public/plates/GalleryResponsive.jpg"); /* Replace with your image path */
+    background-size: contain;
   }
 
   .gallery-title {
     flex-direction: column;
     gap: 150px;
-    padding-top: 35vh;
+    padding-top: 15vh;
+    justify-content: flex-start;
   }
 
   .gallery-title h1 {
