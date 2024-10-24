@@ -1424,7 +1424,14 @@ footer h2 {
   }
 
   .gallery-section-1 {
-    background-image: url("/public/chef-fotos/3.jpg"); /* Replace with your image path */
+    background-image: url("/public/plates/GalleryResponsive.jpg"); /* Replace with your image path */
+    background-size: cover !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important; /* Makes the background fixed during scrolling */
+    margin: 0;
   }
 
   .gallery-title {
