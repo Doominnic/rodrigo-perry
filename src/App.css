@@ -1440,7 +1440,7 @@ footer h2 {
     line-height: 15px;
   }
 
-  .background-image {
+  .service-section.expanded .background-image {
     height: 35vh;
     bottom: 0;
     top: auto;
