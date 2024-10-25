@@ -1300,7 +1300,7 @@ footer h2 {
   .restaurant-description {
     flex-direction: column;
     gap: 25px;
-    margin-top: -30px;
+    margin-top: -5px;
     margin-bottom: 50px;
   }
 
