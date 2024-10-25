@@ -111,6 +111,7 @@ const Gallery = ({ language }) => {
     >
       <div className="gallery-page">
         <div className="gallery-section-1">
+          <img src="plates/8.jpg" className="gallery-section-background" />
           <div className="gallery-title">
             <h1>RODRIGO</h1>
             <h1>PERRY</h1>
