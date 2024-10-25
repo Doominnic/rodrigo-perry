@@ -1454,8 +1454,8 @@ footer h2 {
 
   .gallery-title {
     flex-direction: column;
-    gap: 150px;
-    padding-top: 15vh;
+    gap: 300px;
+    padding-top: 6vh;
     justify-content: flex-start;
   }
 
