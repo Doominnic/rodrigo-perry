@@ -12,6 +12,28 @@ const Gallery = ({ language }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [imageSrc, setImageSrc] = useState("plates/8.jpg");
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 450) {
+        setImageSrc("plates/GalleryResponsive.jpg");
+      } else {
+        setImageSrc("plates/8.jpg");
+      }
+    };
+
+    // Check on initial render
+    handleResize();
+
+    // Add event listener for resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   // Track scroll position dynamically
   useEffect(() => {
@@ -111,7 +133,12 @@ const Gallery = ({ language }) => {
     >
       <div className="gallery-page">
         <div className="gallery-section-1">
-          <img src="plates/8.jpg" className="gallery-section-background" />
+          <img
+            src={imageSrc}
+            className="gallery-section-background"
+            alt="Gallery"
+          />
+          ;
           <div className="gallery-title">
             <h1>RODRIGO</h1>
             <h1>PERRY</h1>
