@@ -180,7 +180,12 @@ const Gallery = ({ language }) => {
             <a href="mailto:perryrodrigo@gmail.com" className="contact-info">
               <div className="email-icon icon"></div>perryrodrigo@gmail.com
             </a>
-            <a href="tel:+573134052801" className="contact-info">
+            <a
+              href="https://wa.me/573134052801"
+              className="contact-info"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div className="tel-icon icon"></div>+57 3134052801
             </a>
           </div>
