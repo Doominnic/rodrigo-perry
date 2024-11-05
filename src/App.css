@@ -1091,11 +1091,37 @@ footer h2 {
 
   .home-item {
     left: clamp(20px, 5vw, 30px);
+    top: 38px;
     font-size: clamp(7px, 1vw, 10px);
   }
 
   .menu-item.active {
     padding: 0px 10px;
+  }
+
+  .career-navbar {
+    grid-template-columns: repeat(6, 125px);
+  }
+
+  .career-navbar-item h1 {
+    font-size: 5px;
+  }
+
+  .restaurant-description {
+    gap: 30px;
+  }
+
+  .restaurant-description p {
+    font-size: clamp(13px, 1.5vw, 16px);
+    line-height: clamp(15px, 2vw, 17px);
+  }
+
+  .restaurant-location {
+    font-size: clamp(10px, 1.5vw, 16px);
+  }
+
+  .celler-logo-navbar {
+    width: 100px !important;
   }
 
   .service-section.expanded {
@@ -1114,6 +1140,10 @@ footer h2 {
   .home-page h1 {
     font-size: 35px;
     letter-spacing: 25px;
+  }
+
+  footer {
+    padding: 10px 70px;
   }
 }
 
@@ -1315,8 +1345,8 @@ footer h2 {
   }
 
   .restaurant-description p {
-    font-size: 10px;
-    line-height: 12px;
+    font-size: clamp(10px, 2vw, 14px);
+    line-height: clamp(11px, 2vw, 15px);
     width: clamp(220px, 50vw, 450px);
   }
 
