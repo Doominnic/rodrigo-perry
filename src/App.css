@@ -916,13 +916,13 @@ ion-icon {
   justify-content: space-between;
   z-index: 5;
   color: var(--quaternary-color);
-  padding: 0 16vw;
+  padding: 0 clamp(5vw, 9vw, 16vw);
 }
 
 .gallery-title h1 {
   font-weight: 500;
   letter-spacing: 35px;
-  font-size: 40px;
+  font-size: clamp(25px, 3vw, 40px);
   margin-top: 105px;
 }
 
