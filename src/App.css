@@ -333,7 +333,7 @@
 .contact-info {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
   color: var(--quaternary-color);
   text-decoration: none;
 }
@@ -1015,7 +1015,7 @@ ion-icon {
 }
 
 footer {
-  background-color: var(--secondary-color);
+  background-color: var(--quaternary-color-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1024,7 +1024,7 @@ footer {
 }
 
 footer h2 {
-  color: var(--quaternary-color);
+  color: var(--secondary-color);
   font-weight: 300;
   font-size: 40px;
 }
@@ -1034,11 +1034,17 @@ footer h2 {
   align-items: center;
   justify-content: center;
   gap: 25px;
+  color: var(--secondary-color);
 }
 
 .footer-links a {
   font-size: 12px;
   font-weight: 300;
+  color: var(--secondary-color);
+}
+
+.footer-links ion-icon {
+  color: var(--secondary-color);
 }
 
 /*-----------------------------------------------------------*/

@@ -23,10 +23,10 @@ const Contact = () => {
             href="https://www.instagram.com/perryrodrigo/"
             className="contact-info"
           >
-            <div className="ig-icon icon"></div>perryrodrigo
+            <ion-icon name="logo-instagram"></ion-icon>perryrodrigo
           </a>
           <a href="mailto:perryrodrigo@gmail.com" className="contact-info">
-            <div className="email-icon icon"></div>perryrodrigo@gmail.com
+            <ion-icon name="mail"></ion-icon>perryrodrigo@gmail.com
           </a>
           <a
             href="https://wa.me/573134052801"
@@ -34,7 +34,7 @@ const Contact = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div className="tel-icon icon"></div>+57 3134052801
+            <ion-icon name="call"></ion-icon>+57 3134052801
           </a>
         </div>
         <div className="contact-box-2">
