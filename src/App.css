@@ -1015,7 +1015,7 @@ ion-icon {
 }
 
 footer {
-  background-color: var(--quaternary-color-color);
+  background-color: var(--quaternary-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
