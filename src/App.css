@@ -717,7 +717,7 @@
 
 .celler-logo-navbar {
   width: 150px !important;
-  height: fit-content !important;
+  height: auto !important;
 }
 
 .navbar-logos {
@@ -746,6 +746,11 @@
   justify-content: space-between;
   align-items: end;
   transition: width 0.6s ease;
+  cursor: pointer;
+}
+
+.service-section.initial:hover {
+  width: 25vw;
 }
 
 .icon-container ion-icon {
@@ -1356,7 +1361,7 @@ footer h2 {
   .restaurant-description p {
     font-size: clamp(10px, 2vw, 14px);
     line-height: clamp(11px, 2vw, 15px);
-    width: clamp(220px, 50vw, 450px);
+    width: clamp(280px, 50vw, 450px);
   }
 
   .restaurant-location {
@@ -1581,6 +1586,7 @@ footer h2 {
   .home-page h1 {
     font-size: 20px;
     letter-spacing: 25px;
+    margin-left: 15px;
   }
 
   .mobile-menu {
@@ -1732,7 +1738,7 @@ footer h2 {
   .restaurant-description p {
     font-size: 10px;
     line-height: 12px;
-    width: 220px;
+    width: 280px;
   }
 
   .restaurant-location {
@@ -1887,6 +1893,7 @@ footer h2 {
   .gallery-title h1 {
     font-size: 20px;
     letter-spacing: 25px;
+    margin-left: 15px;
   }
 
   .mosaic-gallery {

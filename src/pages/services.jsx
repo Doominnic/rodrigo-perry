@@ -116,6 +116,7 @@ const Services = ({ language }) => {
       {titles.map((title, index) => (
         <div
           key={index}
+          onClick={() => toggleExpand(index)}
           className={`service-section ${
             expandedSection === index
               ? "expanded"
@@ -131,13 +132,6 @@ const Services = ({ language }) => {
             }}
           ></div>
           <h2>{title}</h2>
-          <div className="icon-container" onClick={() => toggleExpand(index)}>
-            {expandedSection === index ? (
-              <ion-icon name="chevron-down-circle"></ion-icon>
-            ) : (
-              <ion-icon name="chevron-forward-circle"></ion-icon>
-            )}
-          </div>
 
           <div
             className={`service-content ${
