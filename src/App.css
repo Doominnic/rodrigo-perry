@@ -419,14 +419,16 @@
 }
 
 .plate-1 {
-  height: 100vh;
-  width: 100%;
+  height: clamp(450px, 60vw, 750px);
+
+  aspect-ratio: 1 / 1;
+  margin-left: auto;
   background-image: url("/public/plates/1.jpg"); /* Replace with your image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   /*background-attachment: fixed;*/ /* Makes the background fixed during scrolling */
-  margin: 0;
+
   padding: 0;
   overflow-x: hidden; /* Prevents horizontal scrolling */
 }
@@ -439,8 +441,8 @@
 }
 
 .chef-image-about {
-  height: 55vh;
-  width: 30vw;
+  width: clamp(250px, 35vw, 450px);
+  aspect-ratio: 1 / 1;
   background-image: url("/public/chef-fotos/6.jpg"); /* Replace with your image path */
   background-size: cover;
   background-position: center;
@@ -1289,6 +1291,7 @@ footer h2 {
   .plate-1 {
     width: 300px;
     height: 300px;
+    margin: 0;
   }
 
   .text-display-section-2 {
@@ -1666,6 +1669,7 @@ footer h2 {
   .plate-1 {
     width: 300px;
     height: 300px;
+    margin: 0;
   }
 
   .text-display-section-2 {
