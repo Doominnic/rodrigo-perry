@@ -22,6 +22,7 @@ const Contact = () => {
           <a
             href="https://www.instagram.com/perryrodrigo/"
             className="contact-info"
+            target="_blank"
           >
             <ion-icon name="logo-instagram"></ion-icon>perryrodrigo
           </a>
